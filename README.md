@@ -4,7 +4,13 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 
 ## boot
 `npm install -g angular-cli@latest`       
-`npm install`       
+`npm install`   
+
+### json-server put the local files on the localhost to simulate request 
+`npm install -g json-server`   
+`json-server src/app/data/productList.json`  
+   
+### ng serve to boot the project
 `ng serve`       
 
 ## Development server

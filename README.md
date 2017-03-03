@@ -5,9 +5,12 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 ## boot
 `npm install -g angular-cli@latest`       
 `npm install`  
-json-server is used to put the local files on the localhost network for simulating request      
+    
+json-server is used to put the local files on the localhost network for simulating request   
+
 `npm install -g json-server`   
-`json-server src/app/data/productList.json`  
+`json-server src/app/data/productList.json`   
+  
 ng serve is used to boot the project       
 `ng serve`       
 

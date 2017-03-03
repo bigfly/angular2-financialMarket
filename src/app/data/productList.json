@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "productId": "ec7ibqrw5h8pkcpsbyljt1wngr4z6p2wir1f07tiaivwzbu73kt60guoicemy4",
+      "productCode": "JDB16051703",
+      "productName": "国泰中小盘混合（LOF）",
+      "businessType": "4",
+      "productType": 4,
+      "startDate": 1463657457000,
+      "endDate": 1463724000000,
+      "leftTime": 5,
+      "raiseTime": 10,
+      "rateType": "七日年化收益率",
+      "rate": "1100",
+      "amount": 100000,
+      "leftAmount": 23800000,
+      "duration": 90,
+      "minInvestAmount": 10000,
+      "totalPeriod": 1,
+      "repayWay": "一次性还本付息",
+      "repayDate": 1446023508038,
+      "repayDateInterval": 10,
+      "repayPlanStatus": 0,
+      "status": 2,
+      "calInterestDate": 1446023508038,
+      "contract": null,
+      "merchantId": "800010000060024",
+      "merchantShortName": "商户简称 ",
+      "activityType": 1,
+      "extraRate": 2,
+      "slogan": "灵活投资",
+      "character": "有保障 有收益"
+    }
+  ]
+}

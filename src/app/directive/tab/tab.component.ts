@@ -14,22 +14,21 @@ export class TabComponent implements OnInit{
     hotClass: Object;
     listClass: Object;
     myClass: Object;
-    
     constructor(private router: Router) {}
 
     ngOnInit(): void {
       this.hotClass = {
-        "tab-item-active" : this.state == "hot" ,
-      }
+        'tab-item-active': this.state === 'hot' ,
+      };
       this.listClass = {
-        "tab-item-active" : this.state == "list" ,
-      }
+        'tab-item-active': this.state === 'list' ,
+      };
       this.myClass = {
-        "tab-item-active" : this.state == "my" ,
-      }
+        'tab-item-active': this.state === 'my' ,
+      };
     }
 
-    goTab(tab:string): void{
+    goTab(tab: string): void{
       this.router.navigate([tab])
     }
 }

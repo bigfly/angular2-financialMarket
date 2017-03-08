@@ -1,54 +1,45 @@
-<div class="trade-financial-market" id="HP-view">
-    <div class="allHotProduct">
-        <div class="topBanner"></div>
-        <p class="topTitle">精选产品</p>
-        <section class="hot-allProduct-Con">
-            <div id="projectContainer">
-                <div class="no-product" *ngIf="!showContent">
-                    <div class="box"></div>
-                    <p class="firstTip">产品卖光啦，加紧补货中</p>
-                    <p class="secondTip">请客官稍等片刻</p>
-                </div>
-                <div *ngIf="showContent">
-                    <div class="project-item" *ngFor="let product of hotProducts" data-id="product.productId" (click)="clickProduct(product)">
-                        <div class="item-top">
-                            <div class="content ">
-                                <div class="wrapper">
-                                    <p class="rate">
-                                        <span class="num">{{ product.rate}}%</span>
-                                    </p>
-                                    <p class="text">{{product.rateType}}</p>
-                                </div>
-                                <div class="wrapper wrapperRight">
-                                    <div class="textContainer">
-                                        <p class="duration">
-                                            <span>{{product.productName}}</span>
+<ion-content>
+    <div class="trade-financial-market" id="HP-view" (click)="showPopup(123,234)">
+        <div class="allHotProduct">
+            <div class="topBanner"></div>
+            <p class="topTitle">精选产品</p>
+            <section class="hot-allProduct-Con">
+                <div id="projectContainer">
+                    <div class="no-product" *ngIf="!showContent">
+                        <div class="box"></div>
+                        <p class="firstTip">产品卖光啦，加紧补货中</p>
+                        <p class="secondTip">请客官稍等片刻</p>
+                    </div>
+                    <div *ngIf="showContent">
+                        <div class="project-item" *ngFor="let product of hotProducts" data-id="product.productId" (click)="clickProduct(product)">
+                            <div class="item-top">
+                                <div class="content ">
+                                    <div class="wrapper">
+                                        <p class="rate">
+                                            <span class="num">{{ product.rate}}%</span>
                                         </p>
-                                        <p class="tipLeft ui-border-radius2">
-                                            <span *ngIf="product.productType == 2">定期理财</span>
-                                            <span *ngIf="product.productType == 3">保险理财</span>
-                                            <span *ngIf="product.productType == 4">基金</span>
-                                        </p>
-                                        <p class="tipRight">{{product.slogan}}</p>
+                                        <p class="text">{{product.rateType}}</p>
+                                    </div>
+                                    <div class="wrapper wrapperRight">
+                                        <div class="textContainer">
+                                            <p class="duration">
+                                                <span>{{product.productName}}</span>
+                                            </p>
+                                            <p class="tipLeft ui-border-radius2">
+                                                <span *ngIf="product.productType == 2">定期理财</span>
+                                                <span *ngIf="product.productType == 3">保险理财</span>
+                                                <span *ngIf="product.productType == 4">基金</span>
+                                            </p>
+                                            <p class="tipRight">{{product.slogan}}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </div>
-    <!--<div align-title="left" class="market-tab">
-        <div class="zl-tab tabs-bottom">
-            <div class="tab-nav tabs ">
-                <a  (click)="goTab('jdbAppTradeFinancialMarketxTabHot')" class="icon-hot tab-item " [ngClass]="active" title="精选">
-                    <span class="tab-title">精选</span>
-                </a>
-                <a  (click)="goTab('productList')" class="icon-list tab-item" title="理财"><span class="tab-title">理财</span></a>
-                <a (click)="goTab('myProduct')" class="icon-my tab-item" title="我的"><span class="tab-title">我的</span></a>
-            </div>
+            </section>
         </div>
-    </div>-->
-    <app-tab [state]="hot"></app-tab>
-</div>
+        <app-tab [state]="hot"></app-tab>
+    </div>
+</ion-content>

@@ -1,10 +1,10 @@
 
 <div class="fm-allProductList" id="HP-view">
-    <!--<div *ngIf="!params.fromHot" class="top-filter">
+    <div class="top-filter">
         <div class="top-filter-cate ui-border-b">
-            <a href="javascript:;" *ngFor=" let (key, type) of productTypes" ng-class="{active: +params.productType == +key}" ng-click="changeType(key)">{{type}}</a>
+            <span href="javascript:;" *ngFor="let item of productTypes;let i = index;" [class.ptActive]="+i == ptIndex" (click)="changeType(i)">{{item}}</span>
         </div>
-        <div class="top-filter-extra ui-border-b clearfix">
+        <!--<div class="top-filter-extra ui-border-b clearfix">
             <label class="product-filter-item">{{jdbData.selectP[0].text || '全部产品'}}
                 <jdb-custom-picker
                     class="product-filter-item"
@@ -27,8 +27,8 @@
                 </jdb-custom-picker>
                 <i class="ion-ios-arrow"></i>
             </label>
-        </div>
-    </div>-->
+        </div>-->
+    </div>
     <div class="allProductList">
         <ul class="pro-list">
             <div class="list-contain" *ngFor="let item of productList" (click)="goDetail(item.productId, item.businessType)">

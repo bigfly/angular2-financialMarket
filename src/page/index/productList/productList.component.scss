@@ -38,9 +38,8 @@
     }
 
     .allProductList{ 
-         background: #f5f7fa;
-         bottom: -37px;
-         
+        top: 86px;
+        position: relative;
         .pro-banner {
             height: 110px;
             width: 100%;
@@ -177,7 +176,9 @@
     .top-filter-cate {
         padding: 0 4%;
         background: #508cee;
-        a {
+        height: 44px;
+        
+        span {
             color: #ffffff;
             opacity: .4;
             display: inline-block;
@@ -190,6 +191,9 @@
             color: #ffffff;
             opacity: 1;
             position: relative;
+        }
+        .ptActive{
+            opacity: 1;
         }
     }
 

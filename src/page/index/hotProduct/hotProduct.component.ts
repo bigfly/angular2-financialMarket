@@ -1,11 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Router } from '@angular/router';
-import  {ProductListService}  from "../../../app/service/productList.service" 
+import  {ProductListService}  from '../../../app/service/productList.service';
+import { AlertController } from 'ionic-angular';
 
 @Component({
     selector: 'app-hot-product',
-    styleUrls: ['./hotProduct.component.scss'], 
+    styleUrls: ['./hotProduct.component.scss'],
     templateUrl: './hotProduct.component.html'
   })
 export class HotProductComponent implements OnInit {
@@ -13,17 +14,17 @@ export class HotProductComponent implements OnInit {
   status: Number;
   showContent: Number;
   hotProducts: {};
-  active   : string;
-  hot : string
+  active: string;
+  hot: string;
 
-  constructor(private http:Http,private productListService:ProductListService, private router:Router) {}
+  constructor(private http: Http,private productListService: ProductListService, 
+              private router:Router,private alertCtrl: AlertController) {}
 
   ngOnInit(): void {
 
     this.status = 1;
     this.showContent = 1;
-    this.hot = "hot";
-    
+    this.hot = 'hot';
     let that  = this;
     that.productListService.getList({
       orderType : 0
@@ -33,12 +34,24 @@ export class HotProductComponent implements OnInit {
   }
 
   goToDetail(): void {
-    console.log('gotoDetail')
+    // this.router.navigate([tab])
   }
 
   clickProduct(): void {
     console.log('clickProduct')
   }
 
+  showPopup(title, text) {
+    let popup = this.alertCtrl.create({
+      title: '123',
+      subTitle: 't123ext',
+      buttons: [
+       {
+         text: 'OK'
+       }
+     ]
+    });
+    popup.present();
+  }
 }
 

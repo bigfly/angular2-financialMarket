@@ -4,17 +4,18 @@ import { MyProductComponent } from './myProduct/myProduct.component';
 import { HotProductComponent } from './hotProduct/hotProduct.component';
 import { CommonModule } from '@angular/common';
 import { TabComponent } from '../../app/directive/tab/tab.component';
+import { IonicApp, IonicModule } from 'ionic-angular';
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    IonicModule.forRoot(HotProductComponent)
+  ],
   declarations: [
     ProductListComponent,
     MyProductComponent,
     HotProductComponent,
     TabComponent
-  ],
-  bootstrap: [
-    ProductListComponent
   ]
 })
 export class IndexModule {}

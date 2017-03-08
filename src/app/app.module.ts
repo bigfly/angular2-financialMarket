@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
+import { IonicApp, IonicModule } from 'ionic-angular';
 
 import { RouterModule }   from '@angular/router';
 import { AppComponent } from './app.component';
@@ -22,13 +23,14 @@ import { ProductListService } from './service/productList.service';
     FormsModule,
     AppRoutingModule,
     HttpModule,
-    IndexModule
+    IndexModule,
+    IonicModule.forRoot(AppComponent)
   ],
   providers: [
     ProductListService
   ],
   bootstrap: [
-    bodyComponent
+    IonicApp
   ]
 })
 export class AppModule {}

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Router } from '@angular/router';
-import  {ProductListService}  from '../../../app/service/productList.service';
+import {ProductListService}  from '../../../app/service/productList.service';
 import { AlertController } from 'ionic-angular';
 
 @Component({
@@ -15,20 +15,22 @@ export class HotProductComponent implements OnInit {
   showContent: Number;
   hotProducts: {};
   active: string;
-  hot: string;
+  state: string;
+  test: string;
 
   constructor(private http: Http,private productListService: ProductListService, 
-              private router:Router,private alertCtrl: AlertController) {}
+              private router: Router,private alertCtrl: AlertController) {}
 
   ngOnInit(): void {
-
     this.status = 1;
     this.showContent = 1;
-    this.hot = 'hot';
-    let that  = this;
-    that.productListService.getList({
-      orderType : 0
-    }).then(function(res){
+    this.state = 'hot';
+    this.getData();
+  }
+
+  getData(): void{
+    var that = this;
+    this.productListService.getList('productList').then(function(res){
       that.hotProducts = res;
     });
   }

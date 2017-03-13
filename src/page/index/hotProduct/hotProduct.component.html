@@ -1,5 +1,5 @@
 <ion-content>
-    <div class="trade-financial-market" id="HP-view" (click)="showPopup(123,234)">
+    <div class="trade-financial-market" id="HP-view">
         <div class="allHotProduct">
             <div class="topBanner"></div>
             <p class="topTitle">精选产品</p>
@@ -40,6 +40,9 @@
                 </div>
             </section>
         </div>
-        <app-tab [state]="hot"></app-tab>
+        <!--<div>{{test}}</div>-->
+        <!--<jdb-picker-selector></jdb-picker-selector>-->
+        <!--<app-test-directive [test]="test"></app-test-directive>-->
+        <app-tab [state]="state"></app-tab>
     </div>
 </ion-content>

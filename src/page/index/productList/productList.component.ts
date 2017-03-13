@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import { Http, Response } from '@angular/http';
-import  {ProductListService}  from '../../../app/service/productList.service';
+import {Http, Response } from '@angular/http';
+import {ProductListService}  from '../../../app/service/productList.service';
 
 @Component({
     selector: 'app-list-product',
@@ -12,19 +12,21 @@ export class ProductListComponent implements OnInit {
   active: string;
   productList: {};
   productTypes: Array<string>;
-  list: string;
+  state: string;
   ptIndex: number;
 
   constructor(private http: Http,private productListService: ProductListService) {}
 
   ngOnInit(): void {
     this.productTypes = ['全部产品', '定期理财', '基金'];
-    this.list = 'list';
+    this.state = 'list';
     this.ptIndex = 0;
-    let that  = this;
-    that.productListService.getList({
-      orderType : 0
-    }).then(function(res){
+    this.getData();
+  }
+
+  getData(): void{
+    var that = this;
+    this.productListService.getList('productList').then(function(res){
       that.productList = res;
     });
   }

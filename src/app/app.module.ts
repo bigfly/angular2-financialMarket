@@ -11,6 +11,7 @@ import { bodyComponent } from './body/body.component';
 import { AppRoutingModule } from './app.router';
 import { IndexModule } from '../page/index//index.module';
 import { ProductListService } from './service/productList.service';
+import  {MemMonService}  from './service/createjs.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { ProductListService } from './service/productList.service';
     IonicModule.forRoot(AppComponent)
   ],
   providers: [
-    ProductListService
+    ProductListService,MemMonService
   ],
   bootstrap: [
     IonicApp

@@ -1,1 +1,109 @@
 @import '../../../app/style/tab.scss';
+@import '../../../app/app.component.scss';
+.allMyProduct{ 
+    background: #f5f7fa;
+
+    .my-list{ 
+        margin-bottom: 10px;
+    }
+    .my-info {
+        text-align: center;
+        color: #fff;
+        background: #3579e9 url(../images/profit-bg.png) 0 100% no-repeat;
+        background-size: 100% 160px;
+    }
+
+    .my-assets {
+        padding: 36px 0;
+    }
+
+    .my-assets-text {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .my-assets-num {
+        font-size: 30px;
+    }
+
+    .my-profit-wrap {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .my-profit-sep {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 2px;
+        height: 15px;
+        background: #4c89ed;
+        margin-left: -1px;
+        margin-top: -5px;
+    }
+
+    .my-profit {
+        color: #fff;
+        width: 50%;
+        padding: 16px 0;
+        text-align: center;
+        float: left;
+    }
+    .my-list{ 
+        margin-bottom: 20px;
+    }
+    .my-list-item {
+        margin-bottom: 10px;
+        background-color: #fff;
+    }
+
+    .my-list-control {
+        position: relative;
+        padding: 17px 15px 17px 28px;
+        &:before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 15px;
+            width: 4px;
+            height: 4px;
+            margin-top: -2px;
+            background: #3385ff;
+            border-radius: 50%;
+        }
+    }
+
+    .my-list-name {
+        font-size: 16px;
+        color: #19191a;
+    }
+
+    .my-list-money {
+        font-size: 18px;
+        color: #508cee;
+        > i {
+            font-size: 12px;
+        }
+    }
+
+    .my-list-desc {
+        padding: 20px 15px 20px 28px;
+        color: #979899;
+        font-size: 12px;
+    }
+
+    .my-list-num {
+        font-size: 16px;
+    }
+
+    .my-list-nav {
+        font-size: 14px;
+        color: #656566;
+        > .ion-ios-arrow-right {
+            font-size: 20px;
+            vertical-align: middle;
+            margin-left: 5px;
+            color: #cbccce;
+        }
+    }
+}

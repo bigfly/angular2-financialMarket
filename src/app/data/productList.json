@@ -1,5 +1,5 @@
 {
-  "data": [
+  "productList": [
     {
       "id": "1",
       "productId": "ec7ibqrw5h8pkcpsbyljt1wngr4z6p2wir1f07tiaivwzbu73kt60guoicemy4",
@@ -32,5 +32,28 @@
       "slogan": "灵活投资",
       "character": "有保障 有收益"
     }
-  ]
+  ],
+  "myAssets":
+    {
+      "currentMoney": 10000,
+      "lastTotalIncome": "-2.33",
+      "totalIncome": "+125.33",
+      "list": [{
+          "productType": 4,
+          "investAmount": 1345.90,
+          "hasIncome": "+23.23",
+          "lastIncome": "-22.33"
+      }, {
+          "productType": 2,
+          "investAmount": 212.10,
+          "hasIncome": "+62.1",
+          "lastIncome": "+11.6"
+      }, {
+          "productType": 3,
+          "investAmount": 21212,
+          "hasIncome": "+78.3",
+          "lastIncome": "-3.12"
+      }]
+    }
+  
 }

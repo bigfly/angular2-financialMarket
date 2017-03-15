@@ -29,18 +29,14 @@ export class HotProductComponent implements OnInit {
   }
 
   getData(): void{
-    var that = this;
+    let that = this;
     this.productListService.getList('productList').then(function(res){
       that.hotProducts = res;
     });
   }
 
-  goToDetail(): void {
-    // this.router.navigate([tab])
-  }
-
-  clickProduct(): void {
-    console.log('clickProduct')
+  clickProduct(product): void {
+    this.router.navigate(['detail/' + product['businessType']]);
   }
 
   showPopup(title, text) {

@@ -1,0 +1,6 @@
+<div class="insuranceDetailItem" *ngFor="let remark of list;let i = index;">
+    <div class="contentContainer">
+        <div class="titleImage bg{{i}}"></div><span class="titleTip">{{ remark?.title }}</span>
+        <p class="itemContent">{{ remark?.content }}</p>
+    </div>
+</div>

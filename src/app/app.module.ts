@@ -4,12 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { IonicApp, IonicModule } from 'ionic-angular';
-
 import { RouterModule }   from '@angular/router';
+import { AppRoutingModule } from './app.router';
+
 import { AppComponent } from './app.component';
 import { bodyComponent } from './body/body.component';
-import { AppRoutingModule } from './app.router';
-import { IndexModule } from '../page/index//index.module';
+
+import { IndexModule } from '../page/index/index.module';
+import { IndexDetailModule } from '../page/detail/index/index.module';
+
 import { ProductListService } from './service/productList.service';
 import  {MemMonService}  from './service/createjs.service';
 
@@ -25,6 +28,7 @@ import  {MemMonService}  from './service/createjs.service';
     AppRoutingModule,
     HttpModule,
     IndexModule,
+    IndexDetailModule,
     IonicModule.forRoot(AppComponent)
   ],
   providers: [

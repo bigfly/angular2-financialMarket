@@ -11,12 +11,10 @@
 <div class='detailList' *ngIf="type == 2">
     <div class="contentContainer">
         <div class="titleImage"></div><span class="imgTitle">产品信息</span>
-
         <div class="tableContainer" *ngFor="let item of productImfor" >
             <span class="title">{{ item?.title }}</span>
             <span class="content">{{ item?.content }}</span>
         </div>
-
         <div class="extra">
             <p class="noteContainer" *ngFor="let p of extraList">
                 {{p}}
@@ -24,4 +22,13 @@
         </div>
     </div>
     <div class="relativePaper" (click)="toProtocol()" id="agreementUrl">查看相关文件</div>
+</div>
+
+<div class="protocolContainer" *ngIf="type == 3">
+    <div class="introduceContainer" (click)="click()" *ngFor="let url of urls">
+        <p class="title">{{url.title}}</p> 
+        <div class="arrowContain">
+            <div class="arrow"></div>
+        </div>
+    </div>
 </div>

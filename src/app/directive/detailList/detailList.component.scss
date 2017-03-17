@@ -1,7 +1,8 @@
 @import '../../../app/app.component.scss';
+
+// type = 1
 .detailItem {
     background: #fff;
-
     .contentContainer {
         margin-top: 10px;
         overflow: hidden;
@@ -76,6 +77,8 @@
         }
     }
 }
+
+// type = 2
 .detailList{
     overflow: hidden;
     background: #fff;
@@ -87,6 +90,7 @@
         text-align: center;
         font-size: 14px;
         color: #4279d6;
+        @include onepx-border-top(#e6e8eb);
     }
     .noteContainer{
         line-height: 20px;
@@ -99,6 +103,52 @@
         margin-top: 20px;
     }
 }
+
+// type = 3
+.protocolContainer{ 
+    width: 100%;
+    @include onepx-border-horizontal(#e3e4e6);
+
+    .introduceContainer{ 
+        width: 100%;
+        height: 48px;
+        background:#fff;
+        padding-left:15px;
+
+        .title{ 
+            width:60%;
+            line-height:48px;
+            font-size:14px;
+            color:#19191a;
+            float: left;
+            margin-bottom: 0;
+            height: 48px;
+            @include onepx-border-bottom(#e3e4e6);
+        }
+        .arrowContain{ 
+            position: relative;
+            width: 40%;
+            height: 48px;
+            float: left;
+            @include onepx-border-bottom(#e3e4e6);
+
+            .arrow{ 
+                width: 6px;
+                height: 10.5px;
+                background: url(../images/arrow.jpg) no-repeat;
+                background-size: 100%,100%;
+                position: absolute;
+                right: 15px;
+                top: 17px;
+            }
+        }
+    }
+}
+
+
+
+
+
 
 // 通过这段代码对可改变<app-detail-list class=extra>这样使用此directive的组件内的样式
 

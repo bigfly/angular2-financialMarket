@@ -68,13 +68,6 @@ export class InsuranceDetailComponent implements OnInit {
             ];
 
 
-            // if(detail.status !== 3 && detail.status !== 6 && detail.status !== 7){
-            //     that.productImfor.unshift({
-            //         title: '剩余金额',
-            //         content: detail.leftAmount
-            //     })
-            // }
-
             // 配置头图所需参数
             that.headerParam = {
                 companyName : detail.merchantShortName,

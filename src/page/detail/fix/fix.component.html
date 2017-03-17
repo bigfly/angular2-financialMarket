@@ -1,37 +1,13 @@
-<ion-content class="insuranceProductDetail detail-merge">
-    <app-detail-header [headerParam]='headerParam'></app-detail-header>
-    <div class='insuranceDetailList'>
-        <div class="contentContainer">
-            <div class="titleImage"></div><span class="imgTitle">产品信息</span>
+<ion-content class="productDetail">
 
-            <div class="tableContainer" *ngFor="let item of productImfor" >
-                <span class="title">{{ item?.title }}</span>
-                <span class="content">{{ item?.content }}</span>
-            </div>
-            <div class="noteContainer">
-                募集截止后下一个工作日开始计息，还款日后1-3个工作日回款到账，遇节假日顺延
-            </div>
-        </div>
-        <div class="relativePaper" (click)="toProtocol()" id="agreementUrl">查看相关文件</div>
-    </div>
-    <app-detail-list [list]='list'></app-detail-list>
+    <app-detail-header [headerParam]='headerParam'></app-detail-header>
+
+    <app-detail-list class="fix" [type]='2' [productImfor]='productImfor' [extraList]='extraList'></app-detail-list>
+
+    <app-detail-list [list]='list' class="fix" [type]='1'></app-detail-list>
+    
 </ion-content>
-<!--<ion-footer align-title="center" class="fm-button">
-    <div class="button-container" (click)="clickBuyButton(button?.status)" [ngClass]="disabled">
-        <a *ngIf="button?.status == 1 || button?.status == 2">
-            <span>去购买</span>
-        </a>
-        <a *ngIf="button?.status == 0">
-            <span>本标尚未开始，查看其他理财产品</span>
-        </a>
-        <a *ngIf="button?.status == 7">
-            <span>本标已完成，全额本息已到账</span>
-        </a>
-        <a *ngIf="button?.status != 0 && button?.status != 1 && button?.status != 2 && button?.status != 7">
-            <span>本标募集截止</span>
-        </a>
-    </div>
-</ion-footer>-->
+
 <ion-footer align-title="center" class="fm-button">
     <app-footer-button [status]='status'></app-footer-button>     
 </ion-footer>

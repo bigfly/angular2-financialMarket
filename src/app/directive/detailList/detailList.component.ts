@@ -1,5 +1,5 @@
 import { Http, Response } from '@angular/http';
-import { Component, OnInit,Injectable,Input,ElementRef,ViewChild} from '@angular/core';
+import { Component, OnInit,Input,ElementRef, ViewEncapsulation} from '@angular/core';
 
 @Component({
     selector: 'app-detail-list',
@@ -9,6 +9,9 @@ import { Component, OnInit,Injectable,Input,ElementRef,ViewChild} from '@angular
 export class DetailListComponent implements OnInit {
 
     @Input() list: any;
+    @Input() type: any;
+    @Input() extraList: any;
+    @Input() productImfor: Array<Object>;
 
     constructor() {}
 

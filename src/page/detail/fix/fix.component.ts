@@ -17,6 +17,7 @@ export class FixDetailComponent implements OnInit {
     list: any;
     status: Object;
     statusText;
+    extraList: Array<string>;
 
     constructor(private http: Http,private productListService: ProductListService, 
                 private router: Router) {}
@@ -49,6 +50,16 @@ export class FixDetailComponent implements OnInit {
                 title: detail.status < 5 ? '预计周期' : '计息周期',
                 content: detail.calDescription
             }];
+
+            let bg = {
+                '0': 'ProductExplain',
+                '1': 'Qualifications',
+                '2': 'BackIntro',
+                '3': 'MoneyTip'
+            }
+
+            that.extraList = ['募集截止后下一个工作日开始计息，还款日后1-3个工作日回款到账，遇节假日顺延'];
+
             if(detail.status !== 3 && detail.status !== 6 && detail.status !== 7){
                 that.productImfor.unshift({
                     title: '剩余金额',
@@ -66,6 +77,9 @@ export class FixDetailComponent implements OnInit {
 
             // 配置list所需参数
             that.list = JSON.parse(detail.remark);
+            for(let i = 0, length = that.list.length; i < length ; i++){
+                that.list[i].bg = bg[i];
+            }
 
             that.statusText = {
                 '0' : '本标尚未开始，查看其他理财产品',

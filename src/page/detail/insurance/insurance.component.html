@@ -1,1 +1,52 @@
-<div>insurance</div>
+<ion-content class="productDetail">
+
+    <app-detail-header [headerParam]='headerParam'></app-detail-header>
+
+    <app-detail-list [list]='list' class="insurance" [type]='1'></app-detail-list>
+
+    <app-detail-list class="insurance" [type]='2' [productImfor]='productImfor' [extraList]='extraList'></app-detail-list>
+
+    <app-detail-list [list]='sList' class="insurance m10" [type]='1'></app-detail-list>
+
+    <div class='detailItem detailChart'>
+        <div class="contentContainer">
+            <div class="itemContent specialTable ">
+                <div class="tableTitle">
+                    <p class="titleLeft">费用说明</p>
+                    <p class="titleRight">收费标准</p>
+                </div>
+                <div class="lineContainer f">
+                    <div class="titleContainer ">
+                        <span class="fTitle">初始费用、保单管理费</span>
+                    </div>
+                    <div class="lineContentContainer ">
+                        <p class="fContent">无</p>
+                    </div>
+                </div>
+                <div class="lineContainer s">
+                    <div class="titleContainer ">
+                        <span class="sTitle">退保手续费</span>
+                    </div>
+                    <div class="lineContentContainer ">
+                        <p class="sContent">0-10天(犹豫期),无退保费用</p>
+                        <p class="sContent">1-12个月,取出金额的5%</p>
+                        <p class="sContent">12个月后,无退保费用</p>
+                    </div>
+                </div>
+                <div class="lineContainer t">
+                    <div class="titleContainer ">
+                        <span class="title">风险保险费</span>
+                    </div>
+                    <div class="lineContentContainer ">
+                        <p class="tContent">合同生效当日及之后每月的首日收取,详细标准请见《产品条款》。第一个保单年度内免收风险保险费。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</ion-content>
+
+<ion-footer align-title="center" class="fm-button">
+    <app-footer-button [status]='status'></app-footer-button>     
+</ion-footer>

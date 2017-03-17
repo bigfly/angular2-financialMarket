@@ -25,7 +25,7 @@ export class ProductListComponent implements OnInit {
   }
 
   getData(): void{
-    var that = this;
+    let that = this;
     this.productListService.getList('productList').then(function(res){
       that.productList = res;
     });

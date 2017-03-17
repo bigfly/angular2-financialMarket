@@ -154,6 +154,26 @@
         "newbie_loanAmount": 300000,
         "newbie_leftAvailableAmount": 100000
   },
+  "insuranceDetail":{
+        "error":{
+            "returnCode": 0,
+            "returnMessage":"操作成功"
+        },
+        "serverTime": 12121313131,
+        "data":{
+                "productId" :122121212121,  
+                "productCode" :2016062901,  
+                "productType" : 1, 
+                "productName" : "中华万能保险", 
+                "expectInvestRate": "8",
+                "minInvestAmount" : "121211", 
+                "appendAmount":"1212121",
+                "repayWay" : 1,  
+                "productStatus": 2, 
+                "merchantId" : 2323232323232,
+                "merchantShortName":"中华保险"  
+        }
+  },
   "myAssets":
     {
       "currentMoney": 10000,

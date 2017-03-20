@@ -8,9 +8,10 @@ import { Component, OnInit,Input,ElementRef, ViewEncapsulation} from '@angular/c
   })
 export class DetailListComponent implements OnInit {
 
-    @Input() list: any;
-    @Input() type: any;
-    @Input() extraList: any;
+    @Input() list: Array<Object>;;
+    @Input() type: string;
+    @Input() extraList: Array<any>;
+    @Input() urls: Array<Object>;;
     @Input() productImfor: Array<Object>;
 
     constructor() {}

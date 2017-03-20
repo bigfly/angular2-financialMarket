@@ -161,18 +161,44 @@
         },
         "serverTime": 12121313131,
         "data":{
-                "productId" :122121212121,  
-                "productCode" :2016062901,  
-                "productType" : 1, 
-                "productName" : "中华万能保险", 
-                "expectInvestRate": "8",
-                "minInvestAmount" : "121211", 
-                "appendAmount":"1212121",
-                "repayWay" : 1,  
-                "productStatus": 2, 
-                "merchantId" : 2323232323232,
-                "merchantShortName":"中华保险"  
+            "productId" :122121212121,  
+            "productCode" :2016062901,  
+            "productType" : 1, 
+            "productName" : "中华万能保险", 
+            "expectInvestRate": "8",
+            "minInvestAmount" : "121211", 
+            "appendAmount":"1212121",
+            "repayWay" : 1,  
+            "productStatus": 2, 
+            "merchantId" : 2323232323232,
+            "merchantShortName":"中华保险"  
         }
+  },
+  "fundDetail":{
+    "data": {
+        "dayRate": 0.08,
+        "discount": "0.5",
+        "discountRate": "0.60%",
+        "fundId": "020019",
+        "fundName": "国泰双利A",
+        "fundType": "风险型",
+        "fundYieldRate": "",
+        "holdBalanceAmt": null,
+        "maxSaleRate": "",
+        "minHoldAmt": 0.01,
+        "minPurchaseAmt": 1000.00,
+        "minRedAmt": 1000.00,
+        "minSaleRate": "",
+        "monthCumRate": "",
+        "netValue": 1.00,
+        "netValueDate": "20160112",
+        "riskLevel": "2",
+        "stockYieldRate": "",
+        "subRate": "1.00%"
+    },
+    "returnCode": "0",
+    "returnMsg": "FDM00000",
+    "returnUserMessage": "处理成功"
   },
   "myAssets":
     {

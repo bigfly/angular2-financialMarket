@@ -94,7 +94,7 @@
     }
     .noteContainer{
         line-height: 20px;
-        padding: 15px 15px 0 20px;
+        padding: 15px 15px 15px 20px;
         color: #afb0b3;
         font-size: 12px;
         position: relative;
@@ -107,28 +107,25 @@
 // type = 3
 .protocolContainer{ 
     width: 100%;
+    color:#19191a;
+    font-size:14px;
+    background:#fff;
     @include onepx-border-horizontal(#e3e4e6);
 
     .introduceContainer{ 
         width: 100%;
         height: 48px;
-        background:#fff;
+        line-height:48px;
         padding-left:15px;
 
         .title{ 
             width:60%;
-            line-height:48px;
-            font-size:14px;
-            color:#19191a;
             float: left;
-            margin-bottom: 0;
-            height: 48px;
             @include onepx-border-bottom(#e3e4e6);
         }
         .arrowContain{ 
             position: relative;
             width: 40%;
-            height: 48px;
             float: left;
             @include onepx-border-bottom(#e3e4e6);
 
@@ -144,11 +141,6 @@
         }
     }
 }
-
-
-
-
-
 
 // 通过这段代码对可改变<app-detail-list class=extra>这样使用此directive的组件内的样式
 
@@ -202,19 +194,10 @@
                     padding-left: 28px;
                 }
                 .noteContainer{
-                    padding-left: 50px; 
-                    padding-top: 0px;
+                    padding: 0 15px 0 50px;
                     top: -20px;
                 }
             }
-        }
-    }
-}
-
-:host(.m10){
-    .detailItem{
-        .contentContainer{
-            margin-top: 10px;
         }
     }
 }
@@ -255,6 +238,14 @@
                     float: right;
                 }
             }
+        }
+    }
+}
+
+:host(.m10){
+    .detailItem{
+        .contentContainer{
+            margin-top: 10px;
         }
     }
 }

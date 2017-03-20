@@ -1,3 +1,5 @@
+@import '../../../app/app.component.scss';
+// type == 1
 .bannerTop {
     height: 192px;
     .earn-new {
@@ -74,6 +76,89 @@
         .right {
             position: relative;
             left: 5px;
+        }
+    }
+}
+
+// type == 2
+.fundTop{ 
+    width: 100%;
+    margin-bottom:10px;
+    background:#fff;
+
+    .topContain{ 
+        width:100%;
+        padding-top: 30px;
+        .title{ 
+            font-size: 18px;
+            text-align:center;
+        }
+    }
+    .sline{
+        line-height: 22px;
+        padding-top: 8px;
+        span{
+            position: relative;
+            left: 50%;
+            display: inline-block;
+            padding-left: 4px;
+            padding-right: 4px;
+            font-size: 12px;
+        }
+        .high{ 
+            background:#f6310b;
+        }
+        .mid{ 
+            background:#ffae00;
+        }
+        .low{ 
+            background:#32c5cc;
+        }
+        .type{ 
+            color: #19191a;
+            opacity: .7;
+            margin-left: -64px;
+            color:#19191a;
+        }
+        .risk{ 
+            border-radius: 2px;
+            margin-left: 6px;
+            color:#fff;
+        }
+    }
+    .datStatic{ 
+        height: 83px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        margin-top: 17px;
+        @include onepx-border-horizontal(#e3e4e6);
+
+        .statLeft,.statRight{ 
+            width:50%;
+            height:100%;
+            float:left;
+
+            .riseText{ 
+                margin-top: 16px;
+                opacity:0.5;
+                font-size:12px;
+            }
+            .riseNum{ 
+                font-size:24px;
+                margin-top: 7px;
+            }
+        }
+        .statLeft{
+            &:after {
+                position: absolute;
+                content: "";
+                top: 27.5px;
+                left: 50%;
+                width: 1px;
+                height: 24.5px;
+                background: #e1e3e6;
+            }
         }
     }
 }

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Router } from '@angular/router';
 import { ProductListService }  from '../../../app/service/productList.service';
-import { DetailHeaderComponent }  from '../../../app/directive/detailHeader/detailHeader.component';
 
 @Component({
     selector: 'app-fix-detail',
@@ -11,12 +10,12 @@ import { DetailHeaderComponent }  from '../../../app/directive/detailHeader/deta
   })
 export class FixDetailComponent implements OnInit {
 
+    list;
+    statusText;
     detailInfo: Object;
     headerParam: Object;
-    productImfor: Array<any>;
-    list: any;
     status: Object;
-    statusText;
+    productImfor: Array<any>;
     extraList: Array<string>;
 
     constructor(private http: Http,private productListService: ProductListService, 
@@ -28,7 +27,12 @@ export class FixDetailComponent implements OnInit {
     }
 
     initData(): void{
-
+        this.statusText = {
+            '0' : '本标尚未开始，查看其他理财产品',
+            '1' : '去购买',
+            '2' : '去购买',
+            '7' : '本标已完成，全额本息已到账'
+        };
     }
 
     getData(): void{
@@ -80,13 +84,6 @@ export class FixDetailComponent implements OnInit {
             for(let i = 0, length = that.list.length; i < length ; i++){
                 that.list[i].bg = bg[i];
             }
-
-            that.statusText = {
-                '0' : '本标尚未开始，查看其他理财产品',
-                '1' : '去购买',
-                '2' : '去购买',
-                '7' : '本标已完成，全额本息已到账'
-            };
 
             // 配置按钮
             that.status = {

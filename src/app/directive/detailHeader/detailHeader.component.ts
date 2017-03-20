@@ -9,6 +9,7 @@ import { Component, OnInit,Injectable,Input,ElementRef,ViewChild} from '@angular
 export class DetailHeaderComponent implements OnInit {
 
     @Input() headerParam: Object;
+    @Input() type: Number;
 
     constructor() {}
 

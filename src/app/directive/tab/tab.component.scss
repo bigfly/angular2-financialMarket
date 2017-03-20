@@ -33,21 +33,21 @@
         color : #4279d6;
     }
     .icon-hot {
-        background-image: url(../images/icon-hot.png);
+        background-image: url("/src/images/icon-hot.png");
         &.tab-item-active {
-            background-image: url(../images/icon-hot-active.png);
+            background-image: url(/src/images/icon-hot-active.png);
         }
     }
     .icon-list {
-        background-image: url(../images/icon-fiance.png);
+        background-image: url(/src/images/icon-fiance.png);
         &.tab-item-active {
-            background-image: url(../images/icon-fiance-active.png);
+            background-image: url(/src/images/icon-fiance-active.png);
         }
     }
     .icon-my {
-        background-image: url(../images/icon-my.png);
+        background-image: url(/src/images/icon-my.png);
         &.tab-item-active {
-            background-image: url(../images/icon-my-active.png);
+            background-image: url(/src/images/icon-my-active.png);
         }
     }
 }

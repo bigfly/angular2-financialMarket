@@ -1,4 +1,4 @@
-@import '../../../app/app.component.scss';
+@import '../../app.component.scss';
 
 // type = 1
 .detailItem {
@@ -10,7 +10,7 @@
         padding-bottom: 15px;
         
         .bgProductExplain {
-            background: url("../images/productExplain.png") no-repeat;
+            background: url("/src/images/productExplain.png") no-repeat;
             background-size: 100% 100%;
             width: 10px;
             height: 11px;
@@ -18,7 +18,7 @@
             top: 1px;
         }
         .bgQualifications {
-            background: url("../images/qualifications.png") no-repeat;
+            background: url("/src/images/qualifications.png") no-repeat;
             background-size: 100% 100%;
             width: 11px;
             height: 13px;
@@ -26,19 +26,19 @@
             top: -1px;
         }
         .bgBackIntro {
-            background: url("../images/backIntro.png") no-repeat;
+            background: url("/src/images/backIntro.png") no-repeat;
             background-size: 100% 100%;
             width: 12.5px;
             height: 12px;
         }
         .bgMoneyTip {
-            background: url("../images/moneyTip.png") no-repeat;
+            background: url("/src/images/moneyTip.png") no-repeat;
             background-size: 100% 100%;
             width: 11px;
             height: 13px;
         }
         .bgBuyBack {
-            background: url("../images/buyBack.png") no-repeat;
+            background: url("/src/images/buyBack.png") no-repeat;
             background-size: 100% 100%;
             width: 12.5px;
             height: 12px;
@@ -46,7 +46,7 @@
         .bgLocationTip {
             width: 12px;
             height: 14px;
-            background: url("../images/locationTip.png") no-repeat;
+            background: url("/src/images/locationTip.png") no-repeat;
             background-size: 100% 100%;
             position: relative;
             top: -1px;
@@ -132,7 +132,7 @@
             .arrow{ 
                 width: 6px;
                 height: 10.5px;
-                background: url(../images/arrow.jpg) no-repeat;
+                background: url(/src/images/arrow.jpg) no-repeat;
                 background-size: 100%,100%;
                 position: absolute;
                 right: 15px;
@@ -160,7 +160,7 @@
             margin-left: 15px;
             float: left;
             top: 2px;
-            background: url(../images/productExplain.png) no-repeat;
+            background: url(/src/images/productExplain.png) no-repeat;
             background-size: 100% 100%;
         }
         .imgTitle{
@@ -213,7 +213,7 @@
                 margin-left: 15px;
                 float: left;
                 top: 4px;
-                background: url(../images/productExplain.png) no-repeat;
+                background: url(/src/images/productExplain.png) no-repeat;
                 background-size: 100% 100%;
             }
             .imgTitle{

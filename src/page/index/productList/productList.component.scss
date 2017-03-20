@@ -25,7 +25,7 @@
             margin-left: 5px;
             width: 8px;
             height: 5px;
-            background: url(../images/all-pro-arrow.png);
+            background: url(/src/images/all-pro-arrow.png);
             background-repeat: no-repeat;
             background-size: 100% 100%;
             position: relative;
@@ -45,13 +45,13 @@
             background-repeat: no-repeat;
             background-size: 100% 100%;
             &.type-2 {
-                background-image: url(../images/jiuxinNew.jpg);
+                background-image: url(/src/images/jiuxinNew.jpg);
             }
             &.type-3 {
-                background-image: url(../images/insuranceBanner.jpg);
+                background-image: url(/src/images/insuranceBanner.jpg);
             }
             &.type-4 {
-                background-image: url(../images/fundBanner.png);
+                background-image: url(/src/images/fundBanner.png);
             }
         }
 
@@ -242,7 +242,7 @@
             margin: 0;
             padding: 0;
             top: 50%;
-            background: url(../images/all-pro-arrow.png);
+            background: url(/src/images/all-pro-arrow.png);
             background-repeat: no-repeat;
             background-size: 100% 100%;
             float: left;
@@ -264,7 +264,6 @@
         color: #656566;
         padding: 0 38px 0 16px;
         text-align: center;
-        // @include text-overflow;
         white-space: nowrap;
         text-overflow: ellipsis;
         width: 100%;
@@ -295,7 +294,7 @@
         text-align: center;
         font-size: 14px;
         color: #979899;
-        background: url(../images/no-product.png) top center no-repeat;
+        background: url(/src/images/no-product.png) top center no-repeat;
         background-size: 80px auto;
         padding: 65px 15px 0;
         z-index: 11;

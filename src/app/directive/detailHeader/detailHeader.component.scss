@@ -150,6 +150,15 @@
             }
         }
         .statLeft{
+            .plus{ 
+                color:#ff6056;
+            }
+            .minus{ 
+                color:#5fb873;
+            }
+            .equal{ 
+                color:#979899;
+            }
             &:after {
                 position: absolute;
                 content: "";

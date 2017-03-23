@@ -2,3 +2,105 @@
 .fundDetail{
     background: #f1f2f6;
 }
+.echart{
+    width: 100%;
+    height: 175px;
+}
+.tabContainer{ 
+    text-align: center;
+    font-size: 12px;
+    background: #fff;
+    padding: 15px 15px 0 16px;
+    overflow: hidden;
+
+    span{ 
+        text-align: center;
+        width: 25%;
+        display: inline-block;
+        float: left;
+        color: #979899;
+        background: #fff;
+        height:23px;
+        line-height: 23px;
+    }
+
+    .clicked{ 
+        color:#656566;
+        background: #f2f2f2;
+    }
+}
+
+.stateTabContaienr{ 
+    width : 100%;
+    height : 55px;
+    line-height:55px;
+
+    .tab{ 
+        text-align : center;
+        width: 50%;
+        font-size: 16px;
+        float:left;
+        background: #fff;
+        @include onepx-border-bottom(#e3e4e6);
+    }
+
+    span{ 
+        text-align : center;
+        display : inline-block;
+        width: 49%;
+        font-size: 16px;
+        @include onepx-border-bottom(#e3e4e6);
+    }
+
+    .showSum{ 
+        color: #4279d6;
+        @include onepx-border-bottom(#4279d6);
+    }
+
+}
+
+.found{ 
+    font-size: 12px;
+    margin: 0;
+    padding-left: 15px;
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+
+    .blueCircle{ 
+        background:url("/src/images/blueCircle.jpg"); 
+        background-size: 100%,100%;
+        margin-left: 11px;
+    }
+    .brownCircle{ 
+        background:url("/src/images/brownCircle.jpg"); 
+        background-size: 100%,100%;
+
+    }
+    .circle{
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        position: relative;
+        top: 18px;
+    }
+    .thisFound{ 
+        padding-left: 5px;
+    }
+    .num{
+        color: #ff6056;
+
+        &.plus{ 
+            color:#ff6056;
+        }
+        &.minus{ 
+            color:#5fb873;
+        }
+        &.equal{ 
+            color:#979899;
+        }
+    }
+    span{
+        float: left;
+    }
+}

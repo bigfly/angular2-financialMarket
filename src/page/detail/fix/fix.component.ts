@@ -61,6 +61,12 @@ export class FixDetailComponent implements OnInit {
                 '2': 'BackIntro',
                 '3': 'MoneyTip'
             }
+            // enum gggg {
+            //     ProductExplain,
+            //     Qualifications
+                
+            // }
+            // gggg.Qualifications
 
             that.extraList = ['募集截止后下一个工作日开始计息，还款日后1-3个工作日回款到账，遇节假日顺延'];
 

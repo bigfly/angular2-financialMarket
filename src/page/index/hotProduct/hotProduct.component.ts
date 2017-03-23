@@ -39,17 +39,5 @@ export class HotProductComponent implements OnInit {
     this.router.navigate(['detail/' + product['businessType']]);
   }
 
-  showPopup(title, text) {
-    let popup = this.alertCtrl.create({
-      title: '123',
-      subTitle: 't123ext',
-      buttons: [
-       {
-         text: 'OK'
-       }
-     ]
-    });
-    popup.present();
-  }
 }
 

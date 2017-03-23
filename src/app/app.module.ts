@@ -8,18 +8,15 @@ import { RouterModule }   from '@angular/router';
 import { AppRoutingModule } from './app.router';
 
 import { AppComponent } from './app.component';
-import { bodyComponent } from './body/body.component';
 
 import { IndexModule } from '../page/index/index.module';
 import { IndexDetailModule } from '../page/detail/index/index.module';
 
 import { ProductListService } from './service/productList.service';
-import  {MemMonService}  from './service/createjs.service';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    bodyComponent
+    AppComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +29,7 @@ import  {MemMonService}  from './service/createjs.service';
     IonicModule.forRoot(AppComponent)
   ],
   providers: [
-    ProductListService,MemMonService
+    ProductListService
   ],
   bootstrap: [
     IonicApp

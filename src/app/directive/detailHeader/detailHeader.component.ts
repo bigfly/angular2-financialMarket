@@ -14,7 +14,7 @@ export class DetailHeaderComponent implements OnInit {
     constructor() {}
 
     ngOnInit(): void {
-        console.log(this.headerParam)
+
     }
 
 }

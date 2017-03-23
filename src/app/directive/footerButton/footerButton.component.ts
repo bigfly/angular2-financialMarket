@@ -9,13 +9,10 @@ import { Component, OnInit,Injectable,Input,ElementRef,ViewChild} from '@angular
 export class FooterButtonComponent implements OnInit {
 
     @Input() status: Object;
-    disabled;
 
     constructor() {}
 
-    ngOnInit(): void {
-        
-    }
+    ngOnInit(): void {}
 
 
 }

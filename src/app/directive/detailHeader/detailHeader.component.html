@@ -25,7 +25,7 @@
         <div class="statLeft">
             <p class="riseText">日涨幅</p>
             <p class="riseNum" [ngClass]="{plus:headerParam?.dayRate>0,equal:headerParam?.dayRate==0,minus:headerParam?.dayRate<0}">
-                <span>{{headerParam?.dayRate}}%</span>
+                <span *ngIf="+headerParam?.dayRate>0">+</span><span>{{+headerParam?.dayRate}}%</span>
             </p>
         </div>
         <div class="statRight">

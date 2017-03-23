@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {Http, Response } from '@angular/http';
-import {ProductListService}  from '../../../app/service/productList.service';
+import { Component, OnInit } from '@angular/core';
+import { Http, Response } from '@angular/http';
+import { Router } from '@angular/router';
+import { ProductListService }  from '../../../app/service/productList.service';
 
 @Component({
     selector: 'app-list-product',
@@ -11,14 +12,21 @@ export class ProductListComponent implements OnInit {
 
   active: string;
   productList: {};
-  productTypes: Array<string>;
+  productType: Array<string>;
+  productTypes: Object;
   state: string;
   ptIndex: number;
 
-  constructor(private http: Http,private productListService: ProductListService) {}
+  constructor(private http: Http,private productListService: ProductListService,private router: Router) {}
 
   ngOnInit(): void {
-    this.productTypes = ['全部产品', '定期理财', '基金'];
+    this.productType = ['全部产品', '定期理财', '基金'];
+    this.productTypes = {
+        '0': '全部产品',
+        '2': '定期理财',
+        // '3': '保险理财',
+        '4': '基金'
+    }
     this.state = 'list';
     this.ptIndex = 0;
     this.getData();
@@ -31,8 +39,8 @@ export class ProductListComponent implements OnInit {
     });
   }
 
-  goDetail(): void {
-    console.log('goDetail')
+  goDetail(product): void {
+    this.router.navigate(['detail/' + product['businessType']]);
   }
 
   changeType(type): void{

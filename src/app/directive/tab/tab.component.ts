@@ -17,15 +17,7 @@ export class TabComponent implements OnInit{
     constructor(private router: Router) {}
 
     ngOnInit(): void {
-      this.hotClass = {
-        'tab-item-active': this.state === 'hot' ,
-      };
-      this.listClass = {
-        'tab-item-active': this.state === 'list' ,
-      };
-      this.myClass = {
-        'tab-item-active': this.state === 'my' ,
-      };
+
     }
 
     goTab(tab: string): void{

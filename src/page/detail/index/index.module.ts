@@ -10,9 +10,15 @@ import { DetailHeaderComponent }  from '../../../app/directive/detailHeader/deta
 import { DetailListComponent }  from '../../../app/directive/detailList/detailList.component';
 import { FooterButtonComponent }  from '../../../app/directive/footerButton/footerButton.component';
 
+import { EchartsNg2Module } from 'echarts-ng2';
+import { EchartComponent }  from '../../../app/directive/echart/echart.component';
+
+import { TestDirectiveComponent }  from '../../../app/directive/testDirective/testDirective.component';
+
 @NgModule({
   imports: [
     CommonModule,
+    EchartsNg2Module,
     IonicModule.forRoot(IndexDetailComponent)
   ],
   declarations: [
@@ -22,7 +28,9 @@ import { FooterButtonComponent }  from '../../../app/directive/footerButton/foot
     IndexDetailComponent,
     DetailHeaderComponent,
     DetailListComponent,
-    FooterButtonComponent
+    FooterButtonComponent,
+    EchartComponent,
+    TestDirectiveComponent
   ]
 })
 export class IndexDetailModule {}

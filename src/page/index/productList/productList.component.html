@@ -1,37 +1,12 @@
-
-<div class="fm-allProductList" id="HP-view">
+<ion-content class="fm-allProductList">
     <div class="top-filter">
         <div class="top-filter-cate ui-border-b">
-            <span href="javascript:;" *ngFor="let item of productTypes;let i = index;" [class.ptActive]="+i == ptIndex" (click)="changeType(i)">{{item}}</span>
+            <span href="javascript:;" *ngFor="let item of productType;let i = index;" [class.ptActive]="+i == ptIndex" (click)="changeType(i)">{{item}}</span>
         </div>
-        <!--<div class="top-filter-extra ui-border-b clearfix">
-            <label class="product-filter-item">{{jdbData.selectP[0].text || '全部产品'}}
-                <jdb-custom-picker
-                    class="product-filter-item"
-                    custom-data="dateSelect"
-                    select-objects = "jdbData.selectP"
-                    ng-model="params.duration"
-                    picker-ctl="pick1.pickerCtlP"
-                    >
-                </jdb-custom-picker>
-                <i class="ion-ios-arrow"></i>
-            </label>
-            <label class="product-filter-item">{{jdbData.selectO[0].text || '综合排序'}}
-                <jdb-custom-picker
-                    class="product-filter-item"
-                    custom-data="hotSelect"
-                    select-objects = "jdbData.selectO"
-                    ng-model="params.orderBy"
-                    picker-ctl="pick2.pickerCtlO"
-                    >
-                </jdb-custom-picker>
-                <i class="ion-ios-arrow"></i>
-            </label>
-        </div>-->
     </div>
     <div class="allProductList">
         <ul class="pro-list">
-            <div class="list-contain" *ngFor="let item of productList" (click)="goDetail(item.productId, item.businessType)">
+            <div class="list-contain" *ngFor="let item of productList" (click)="goDetail(item)">
                 <div *ngIf="$index < 3" ng-class="'rank-'+$index"></div>
                 <div class="pro-item clearfix">
                     <div class="pro-item-left ui-border-r">
@@ -54,4 +29,4 @@
         </ul>
     </div>
     <app-tab [state]="state"></app-tab>
-</div>
+</ion-content>

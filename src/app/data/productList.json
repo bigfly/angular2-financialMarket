@@ -38,7 +38,7 @@
       "productCode": "JDB16051703",
       "productName": "中华保险",
       "businessType": "2",
-      "productType": 2,
+      "productType": 3,
       "startDate": 1463657457000,
       "endDate": 1463724000000,
       "leftTime": 5,
@@ -97,63 +97,122 @@
       "character": "有保障 有收益"
     }
   ],
+
+
   "fixDetail":{
-        "productDetail": {
-            "id": "myff840juylnbymxd258kbcmqzo33c7glisncprxm1mswe0yxj4slzky2ix98y",
-            "productCode": "JDB16051603",
-            "productName": "九信理财",
-            "amount": 100000000,
-            "leftAmount": 30240000,
-            "startDate": 1463397328000,
-            "endDate": 1463637600000,
-            "raiseTime": 0,
-            "rate": 10.0,
-            "duration": 90,
-            "minInvestAmount": 10,
-            "remark": "[{\"title\":\"产品说明\",\"content\":\"九信理财是九信金融推出的对九鼎控股提供连带责任保证的借款项目进行自动分散投资且到期回收本息的理财计划。\"},{\"title\":\"借款人资质\",\"content\":\"借款人毕业于重庆邮电大学法律与经济专业，现任重庆某投资公司总经理，同时为该家公司的控股股东。借款人股权投资和证券投资经验丰富，此次以足额新三板挂牌公司股票作为还款保证，借款用途为补充公司流动资金。\"},{\"title\":\"背景介绍\",\"content\":\"九信金融系九鼎投资旗下综合金融服务平台，依托九鼎投资雄厚的资金支持、独有的优质项目储备、立体的业务及风控体系，为投资人提供安全、稳健的理财产品和专业、多元的金融服务，包括固定收益类项目、私募基金、FOF等。\"},{\"title\":\"风控措施\",\"content\":\"九信理财的项目来源包括上市公司的股东，私募基金的出资人、高成长性企业的股东等。九信金融拥有行业知名投研团队，专职、独立的风控团队，严苛的项目评审机制以及全方位专业法律服务团队。所有项目均提供优质的金融资产作为担保物，由九鼎控股提供连带责任保证，交易资金盗转盗用风险由阳光保险提供安全保障。\"}]",
-            "totalPeriod": 1,
-            "repayWay": "一次性还本付息",
-            "repayDate": 1471500000000,
-            "repayDateInterval": 0,
-            "repayPlanStatus": 0,
-            "status": 2,
-            "calInterestDate": null,
-            "contract": null,
-            "merchantId": "800010000060024",
-            "calDescription": "2016-05-20至2016-08-19",
-            "investAmount": 0,
-            "memberId": "577803965889358928",
-            "totalAmount": 10000,
-            "expectIncome": 173,
-            "leftTime": 0,
-            "pversion": "3.0",
-            "orderby": "1",
-            "activityType": 0,
-            "extraRate": 2,
-            "bonusNum":1,
-            "expectEarn":123,
-            "couponId":"123",
-            "bonusText":"5%加息劵",
-            "interestCouponList":{
-                "useBonus":[{
-                    "rate" : 2,
-                    "text" : ["投资1000元－20000元","期限为30天的理财产品可用","加息天数5天"],
-                    "time" : "2016/2/3",
-                    "productId" : "123",
-                    "couponId" : "123"
-                }],
-                "unUseBonus":[{
-                    "rate" : 2,
-                    "text" : ["投资1000元－20000元","期限为30天的理财产品可用","加息天数5天"],
-                    "time" : "2016/2/3",
-                    "productId" : "123",
-                    "couponId" : "123"
-                }]
-            }
-        },
+		"productDetail": {
+			"id": "o15a92fhdigo0fptydag7aulad2fubtsjc1h8oio1gn6iblwnvmszn5rh93348",
+			"productCode": "JDB16121220",
+			"productName": "九信理财",
+			"amount": 10000000,
+			"leftAmount": 9704800,
+			"startDate": 1482741202000,
+			"endDate": 1492850006000,
+			"raiseTime": 0,
+			"rate": 7.0,
+			"duration": 90,
+			"minInvestAmount": 100,
+			"remark": "[{\"title\":\"产品说明\",\"content\":\"九信理财是九信金融推出的对九鼎投资提供担保的借款项目进行自动分散投资且到期回收本息的理财计划。\"},{\"title\":\"背景介绍\",\"content\":\"九信金融系九鼎投资旗下综合金融服务平台，依托九鼎投资雄厚的资金支持、独有的优质项目储备、立体的业务及风控体系，为投资人提供安全、稳健的理财产品和专业、多元的金融服务，包括固定收益类项目、私募基金、FOF等。\"},{\"title\":\"合作机构\",\"content\":\"九信理财的项目来源包括上市公司的股 东、私募基金的出资人、高成长性企业的股东等。九信金融拥有行业顶尖投研团队，专职、独立的风控团队，最严苛的项目评审机制以及全方位专业法律服务团队。所有项目都会提供优质的金融资产作为担保物，由九鼎投资提供担保，并且由阳光保险保障资金交易安全。\"}]",
+			"totalPeriod": 0,
+			"repayWay": "一次性还本付息",
+			"repayDate": 1489334400000,
+			"repayDateInterval": 0,
+			"repayPlanStatus": 0,
+			"status": 2,
+			"calInterestDate": null,
+			"contract": null,
+			"merchantId": "800010000050001",
+			"calDescription": null,
+			"investAmount": 0,
+			"activityType": 0,
+			"extraRate": 0.0,
+			"memberId": null,
+			"totalAmount": 0,
+			"expectIncome": 0,
+			"leftTime": 0,
+			"pversion": "4.0",
+			"orderby": "1"
+		},
+		"hasCoupon":"1",
+		"newbie_loanAmount": 0,
+		"newbie_leftAvailableAmount": 0,
+		"avlCouponList": [{
+			"id": "123",
+			"name": "加息券",
+			"prizeType": null,
+			"minInvestAmount": null,
+			"maxInvestAmount": null,
+			"expireTimeFrom": null,
+			"expireTimeTo": null,
+			"interestRate": "24.0",
+			"avlProduct": "九信理财产品可用",
+			"interestDays": "加息天数90天",
+			"expDate": "有效期至: 2017/06/14",
+			"interestRange": "投资500元~50000元",
+			"chosen":"0"
+		}, {
+			"id": "234",
+			"name": "加息券",
+			"prizeType": null,
+			"minInvestAmount": null,
+			"maxInvestAmount": null,
+			"expireTimeFrom": null,
+			"expireTimeTo": null,
+			"interestRate": "24.0",
+			"avlProduct": "期限为90的理财产品可用",
+			"interestDays": "加息天数90天",
+			"expDate": "有效期至: 2017/06/14",
+			"interestRange": "投资500元~50000元",
+			"chosen":"1"
+		}],
+		"disabledCouponList": [{
+			"id": "123",
+			"name": "加息券",
+			"prizeType": null,
+			"minInvestAmount": null,
+			"maxInvestAmount": null,
+			"expireTimeFrom": null,
+			"expireTimeTo": null,
+			"interestRate": "24.0",
+			"avlProduct": "九信理财产品可用",
+			"interestDays": "加息天数90天",
+			"expDate": "有效期至: 2017/06/14",
+			"interestRange": "投资500元~50000元"
+		}, {
+			"id": "234",
+			"name": "加息券",
+			"prizeType": null,
+			"minInvestAmount": null,
+			"maxInvestAmount": null,
+			"expireTimeFrom": null,
+			"expireTimeTo": null,
+			"interestRate": "24.0",
+			"avlProduct": "期限为90的理财产品可用",
+			"interestDays": "加息天数90天",
+			"expDate": "有效期至: 2017/06/14",
+			"interestRange": "投资500元~50000元"
+		}],
+		"usableCoupon": "2",
+		"profit": "172.6",
+		"interestCoupon": {
+			"id": "234",
+			"name": "2%加息券",
+			"prizeType": "31",
+			"minInvestAmount": 500,
+			"maxInvestAmount": 50000,
+			"expireTimeFrom": 1482740944000,
+			"expireTimeTo": 1497410111000,
+			"intrestType": "2",
+			"intrestRate": 24.0,
+			"maxIntrestDays": 90,
+			"productDays": null,
+			"usable": 0
+		},
         "newbie_loanAmount": 300000,
         "newbie_leftAvailableAmount": 100000
   },
+
+
   "insuranceDetail":{
         "error":{
             "returnCode": 0,
@@ -174,6 +233,8 @@
             "merchantShortName":"中华保险"  
         }
   },
+
+
   "fundDetail":{
     "data": {
         "dayRate": 0.08,
@@ -200,6 +261,8 @@
     "returnMsg": "FDM00000",
     "returnUserMessage": "处理成功"
   },
+
+
   "changeState":{
     "returnCode": 0,
     "returnMessage": "操作成功",
@@ -213,6 +276,8 @@
             ["5","2","9","12","20","13","15","8","22","14","11","12","13","5","2","9","12","20","13","15","8","22","14","11","12","13"]
     }
   },
+
+
   "changeTime":{
       "data":{
 		"fundList": {
@@ -227,6 +292,8 @@
 		"stockYieldRate": ""
       }
   },
+
+
   "myAssets":
     {
       "currentMoney": 10000,
@@ -248,6 +315,122 @@
           "hasIncome": "+78.3",
           "lastIncome": "-3.12"
       }]
-    }
+    },
+
+    "fixBuy":{
+		"data": {
+			"id": "o15a92fhdigo0fptydag7aulad2fubtsjc1h8oio1gn6iblwnvmszn5rh93348",
+			"productCode": "JDB16121220",
+			"productName": "九信理财",
+			"amount": 10000000,
+			"leftAmount": 9704800,
+			"startDate": 1482741202000,
+			"endDate": 1492850006000,
+			"raiseTime": 0,
+			"rate": 7.0,
+			"duration": 90,
+			"minInvestAmount": 100,
+			"remark": "[{\"title\":\"产品说明\",\"content\":\"九信理财是九信金融推出的对九鼎投资提供担保的借款项目进行自动分散投资且到期回收本息的理财计划。\"},{\"title\":\"背景介绍\",\"content\":\"九信金融系九鼎投资旗下综合金融服务平台，依托九鼎投资雄厚的资金支持、独有的优质项目储备、立体的业务及风控体系，为投资人提供安全、稳健的理财产品和专业、多元的金融服务，包括固定收益类项目、私募基金、FOF等。\"},{\"title\":\"合作机构\",\"content\":\"九信理财的项目来源包括上市公司的股 东、私募基金的出资人、高成长性企业的股东等。九信金融拥有行业顶尖投研团队，专职、独立的风控团队，最严苛的项目评审机制以及全方位专业法律服务团队。所有项目都会提供优质的金融资产作为担保物，由九鼎投资提供担保，并且由阳光保险保障资金交易安全。\"}]",
+			"totalPeriod": 0,
+			"repayWay": "一次性还本付息",
+			"repayDate": 1489334400000,
+			"repayDateInterval": 0,
+			"repayPlanStatus": 0,
+			"status": 2,
+			"calInterestDate": null,
+			"contract": null,
+			"merchantId": "800010000050001",
+			"calDescription": null,
+			"investAmount": 0,
+			"activityType": 0,
+			"extraRate": 0.0,
+			"memberId": null,
+			"totalAmount": 0,
+			"expectIncome": 0,
+			"leftTime": 0,
+			"pversion": "4.0",
+			"orderby": "1"
+		},
+		"hasCoupon":"1",
+		"newbie_loanAmount": 0,
+		"newbie_leftAvailableAmount": 0,
+		"avlCouponList": [{
+			"id": "123",
+			"name": "加息券",
+			"prizeType": null,
+			"minInvestAmount": null,
+			"maxInvestAmount": null,
+			"expireTimeFrom": null,
+			"expireTimeTo": null,
+			"interestRate": "24.0",
+			"avlProduct": "九信理财产品可用",
+			"interestDays": "加息天数90天",
+			"expDate": "有效期至: 2017/06/14",
+			"interestRange": "投资500元~50000元",
+			"chosen":"0"
+		}, {
+			"id": "234",
+			"name": "加息券",
+			"prizeType": null,
+			"minInvestAmount": null,
+			"maxInvestAmount": null,
+			"expireTimeFrom": null,
+			"expireTimeTo": null,
+			"interestRate": "24.0",
+			"avlProduct": "期限为90的理财产品可用",
+			"interestDays": "加息天数90天",
+			"expDate": "有效期至: 2017/06/14",
+			"interestRange": "投资500元~50000元",
+			"chosen":"1"
+		}],
+		"disabledCouponList": [{
+			"id": "123",
+			"name": "加息券",
+			"prizeType": null,
+			"minInvestAmount": null,
+			"maxInvestAmount": null,
+			"expireTimeFrom": null,
+			"expireTimeTo": null,
+			"interestRate": "24.0",
+			"avlProduct": "九信理财产品可用",
+			"interestDays": "加息天数90天",
+			"expDate": "有效期至: 2017/06/14",
+			"interestRange": "投资500元~50000元"
+		}, {
+			"id": "234",
+			"name": "加息券",
+			"prizeType": null,
+			"minInvestAmount": null,
+			"maxInvestAmount": null,
+			"expireTimeFrom": null,
+			"expireTimeTo": null,
+			"interestRate": "24.0",
+			"avlProduct": "期限为90的理财产品可用",
+			"interestDays": "加息天数90天",
+			"expDate": "有效期至: 2017/06/14",
+			"interestRange": "投资500元~50000元"
+		}],
+		"usableCoupon": "2",
+		"profit": "172.6",
+		"interestCoupon": {
+			"id": "234",
+			"name": "2%加息券",
+			"prizeType": "31",
+			"minInvestAmount": 500,
+			"maxInvestAmount": 50000,
+			"expireTimeFrom": 1482740944000,
+			"expireTimeTo": 1497410111000,
+			"intrestType": "2",
+			"intrestRate": 24.0,
+			"maxIntrestDays": 90,
+			"productDays": null,
+			"usable": 0
+		},
+        "newbie_loanAmount": 300000,
+        "newbie_leftAvailableAmount": 100000
+  }
   
 }
+
+
+  

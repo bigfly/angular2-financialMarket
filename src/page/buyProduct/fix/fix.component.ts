@@ -1,4 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Http, Response } from '@angular/http';
+import { Router } from '@angular/router';
+import { ProductListService }  from '../../../app/service/productList.service';
 
 @Component({
     selector: 'app-fix-buy',
@@ -7,9 +10,22 @@ import {Component, OnInit} from '@angular/core';
   })
 export class FixBuyComponent implements OnInit {
 
-  constructor() {}
+  @Input() routerParam: Object;
 
-  ngOnInit(): void {}
+  param:       Object;
+
+  constructor(private productListService: ProductListService) {}
+
+  ngOnInit(): void {
+      this.getData();
+  }
+
+  getData(){
+      let that = this;
+      this.productListService.getList('fixBuy').then(function(res){
+          that.param = res['data'];
+      });
+  }
 
 }
 

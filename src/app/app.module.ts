@@ -11,12 +11,16 @@ import { AppComponent } from './app.component';
 
 import { IndexModule } from '../page/index/index.module';
 import { IndexDetailModule } from '../page/detail/index/index.module';
+import { IndexBuyProductModule } from '../page/buyProduct/index/index.module';
+import { DirectiveModule } from './directive/index.module';
+
 
 import { ProductListService } from './service/productList.service';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     CommonModule,
@@ -26,6 +30,8 @@ import { ProductListService } from './service/productList.service';
     HttpModule,
     IndexModule,
     IndexDetailModule,
+    IndexBuyProductModule,
+    DirectiveModule,
     IonicModule.forRoot(AppComponent)
   ],
   providers: [

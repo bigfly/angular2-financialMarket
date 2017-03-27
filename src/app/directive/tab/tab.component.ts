@@ -11,9 +11,11 @@ import { Router } from '@angular/router';
 export class TabComponent implements OnInit{
 
     @Input() state: string;
+    
     hotClass: Object;
     listClass: Object;
     myClass: Object;
+
     constructor(private router: Router) {}
 
     ngOnInit(): void {

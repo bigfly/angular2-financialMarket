@@ -1,24 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicApp, IonicModule } from 'ionic-angular';
+import { EchartsNg2Module } from 'echarts-ng2';
 
 import { IndexDetailComponent } from '../index/index.component';
+
+import { DirectiveModule } from '../../../app/directive/index.module';
+
 import { FixDetailComponent } from '../fix/fix.component';
 import { InsuranceDetailComponent } from '../insurance/insurance.component';
 import { FundDetailComponent } from '../fund/fund.component';
-import { DetailHeaderComponent }  from '../../../app/directive/detailHeader/detailHeader.component';
-import { DetailListComponent }  from '../../../app/directive/detailList/detailList.component';
-import { FooterButtonComponent }  from '../../../app/directive/footerButton/footerButton.component';
 
-import { EchartsNg2Module } from 'echarts-ng2';
-import { EchartComponent }  from '../../../app/directive/echart/echart.component';
+import { Fix1Component } from '../fix/fix1/fix1.component';
+import { Insurance1Component } from '../insurance/insurance1/insurance1.component';
+import { Fund1Component } from '../fund/fund1/fund1.component';
 
-import { TestDirectiveComponent }  from '../../../app/directive/testDirective/testDirective.component';
+
+
 
 @NgModule({
   imports: [
     CommonModule,
     EchartsNg2Module,
+    DirectiveModule,
     IonicModule.forRoot(IndexDetailComponent)
   ],
   declarations: [
@@ -26,11 +30,9 @@ import { TestDirectiveComponent }  from '../../../app/directive/testDirective/te
     InsuranceDetailComponent,
     FundDetailComponent,
     IndexDetailComponent,
-    DetailHeaderComponent,
-    DetailListComponent,
-    FooterButtonComponent,
-    EchartComponent,
-    TestDirectiveComponent
+    Fix1Component,
+    Insurance1Component,
+    Fund1Component
   ]
 })
 export class IndexDetailModule {}

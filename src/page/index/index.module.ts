@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { IonicApp, IonicModule } from 'ionic-angular';
+
 import { ProductListComponent } from './productList/productList.component';
 import { MyProductComponent } from './myProduct/myProduct.component';
 import { HotProductComponent } from './hotProduct/hotProduct.component';
-import { CommonModule } from '@angular/common';
+
 import { TabComponent } from '../../app/directive/tab/tab.component';
-import  {JdbPickerSelector}  from '../../app/directive/jdbPickerSelector/jdbPickerSelector.component';
-import { IonicApp, IonicModule } from 'ionic-angular';
+
 
 @NgModule({
   imports: [
@@ -17,7 +19,6 @@ import { IonicApp, IonicModule } from 'ionic-angular';
     MyProductComponent,
     HotProductComponent,
     TabComponent,
-    JdbPickerSelector
   ]
 })
 export class IndexModule {}

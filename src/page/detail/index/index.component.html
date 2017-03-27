@@ -1,6 +1,6 @@
 
-<app-fix-detail *ngIf="param?.businessType == 1" [param]="param"></app-fix-detail>
+<app-fix-detail *ngIf="routerParam?.productType == 2" [routerParam]="routerParam"></app-fix-detail>
 
-<app-insurance-detail *ngIf="param?.businessType == 2" [param]="param"></app-insurance-detail>
+<app-insurance-detail *ngIf="routerParam?.productType == 3" [routerParam]="routerParam"></app-insurance-detail>
 
-<app-fund-detail *ngIf="param?.businessType == 3" [param]="param"></app-fund-detail>
+<app-fund-detail *ngIf="routerParam?.productType == 4" [routerParam]="routerParam"></app-fund-detail>

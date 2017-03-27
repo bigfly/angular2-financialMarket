@@ -32,8 +32,7 @@ export class HotProductComponent implements OnInit {
   }
 
   clickProduct(product): void {
-    this.router.navigate(['detail/' + product['businessType'] + '/' + product['productId']]);
+    this.router.navigate(['detail/' + product['businessType'] + '/' + product['productId'] + '/' + product['productType']]);
   }
 
 }
-

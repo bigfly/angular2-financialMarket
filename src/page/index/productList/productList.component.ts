@@ -39,7 +39,7 @@ export class ProductListComponent implements OnInit {
   }
 
   goDetail(product): void {
-    this.router.navigate(['detail/' + product['businessType']]);
+    this.router.navigate(['detail/' + product['businessType'] + '/' + product['productId'] + '/' + product['productType']]);
   }
 
   changeType(type): void{

@@ -120,6 +120,23 @@
     }
 }
 
+.type3{
+    color: #646566;
+    font-size: 14px;
+    li {
+        padding: 4%;
+        padding-left: 0;
+        margin-left: 4%;
+        color: #19191a;
+        font-size: 16px;
+    }
+    .size {
+        color: #19191a;
+        font-size: 16px;
+        padding-right: 2px;
+    }
+}
+
 // 通过这段代码对可改变<app-detail-list class=extra>这样使用此directive的组件内的样式
 :host(.fund){
     .type2{

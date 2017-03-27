@@ -16,3 +16,9 @@
         </div>
     </div>
 </div>
+
+<ul class="type3" *ngIf="type == 3">
+    <li *ngFor="let item of list">{{ item.left }}
+        <div class="fr"><span class="size">{{ item.right }}</span><span>{{ item.unit }}</span></div>
+    </li>
+</ul>

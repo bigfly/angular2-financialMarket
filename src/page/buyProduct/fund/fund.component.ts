@@ -1,14 +1,30 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Http, Response } from '@angular/http';
+import { Router } from '@angular/router';
+import { ProductListService }  from '../../../app/service/productList.service';
 
 @Component({
-    selector: 'app-fix-buy',
-    styleUrls: ['./fix.component.scss'], 
-    templateUrl: './fix.component.html'
+    selector: 'app-fund-buy',
+    styleUrls: ['./fund.component.scss'], 
+    templateUrl: './fund.component.html'
   })
 export class FundBuyComponent implements OnInit {
 
-  constructor() {}
+  @Input() routerParam: Object;
 
-  ngOnInit(): void {}
+  param:       Object;
+
+  constructor(private productListService: ProductListService) {}
+
+  ngOnInit(): void {
+      this.getData();
+  }
+
+  getData(){
+      let that = this;
+      this.productListService.getList('fixBuy').then(function(res){
+          that.param = res['productDetail'];
+      });
+  }
 
 }

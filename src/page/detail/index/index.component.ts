@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { Router,ActivatedRoute} from '@angular/router';
-import {ProductListService}  from '../../../app/service/productList.service';
+import { Router,ActivatedRoute } from '@angular/router';
+import { ProductListService }  from '../../../app/service/productList.service';
 import { AlertController } from 'ionic-angular';
 
 @Component({
@@ -11,21 +11,15 @@ import { AlertController } from 'ionic-angular';
   })
 export class IndexDetailComponent implements OnInit {
 
-  // productId: String
-  // businessType: String;
-  param: Object;
+  routerParam: Object;
+  param:       Object;
 
   constructor(private http: Http, private router: ActivatedRoute, private productListService: ProductListService) {}
 
   ngOnInit(): void {
       let that = this;
       this.router.params.subscribe(function(params){
-        // that.businessType  = params['businessType'];
-        // that.param = {
-        //   businessType: that.businessType,
-        //   productId: that.productId
-        // }
-        that.param = params;
+        that.routerParam = params;
       });
   }
 

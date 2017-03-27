@@ -1,6 +1,22 @@
-<ion-content class="productDetail has-footer has-subfooter">
+<ion-content class="fixDetail">
 
     <app-detail-header [headerParam]='headerParam' [type]="1"></app-detail-header>
+
+    <div class='detailList'>
+        <div class="contentContainer">
+            <div class="titleImage"></div><span class="imgTitle">产品信息</span>
+            <div class="tableContainer" *ngFor="let item of productImfor" >
+                <span class="title">{{ item?.title }}</span>
+                <span class="content">{{ item?.content }}</span>
+            </div>
+            <div class="extra">
+                <p class="noteContainer" *ngFor="let p of extraList">
+                    {{p}}
+                </p>
+            </div>
+        </div>
+        <div class="relativePaper" (click)="toProtocol()" id="agreementUrl">查看相关文件</div>
+    </div>
 
     <app-detail-list class="fix" [type]='2' [productImfor]='productImfor' [extraList]='extraList'></app-detail-list>
 
@@ -9,9 +25,9 @@
 </ion-content>
 
 
-<ion-footer align-title="center" class="fm-button">
+<ion-footer align-title="center">
 
-    <app-footer-button [status]='status' class="fm-button test"></app-footer-button>   
+    <app-footer-button [status]='status'></app-footer-button>   
       
 </ion-footer>
  

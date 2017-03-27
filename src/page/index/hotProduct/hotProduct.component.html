@@ -10,7 +10,7 @@
                         <p class="firstTip">产品卖光啦，加紧补货中</p>
                         <p class="secondTip">请客官稍等片刻</p>
                     </div>
-                    <div *ngIf="showContent">
+                    <div>
                         <div class="project-item" *ngFor="let product of hotProducts" data-id="product.productId" (click)="clickProduct(product)">
                             <div class="item-top">
                                 <div class="content ">
@@ -40,9 +40,6 @@
                 </div>
             </section>
         </div>
-        <!--<div>{{test}}</div>-->
-        <!--<jdb-picker-selector></jdb-picker-selector>-->
-        <!--<app-test-directive [test]="test"></app-test-directive>-->
         <app-tab [state]="state"></app-tab>
     </div>
 </ion-content>

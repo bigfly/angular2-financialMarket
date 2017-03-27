@@ -10,12 +10,11 @@ import { ProductListService }  from '../../../app/service/productList.service';
   })
 export class ProductListComponent implements OnInit {
 
-  active: string;
-  productList: {};
-  productType: Array<string>;
-  productTypes: Object;
-  state: string;
-  ptIndex: number;
+  productList:    Object
+  productType:    Array<string>;
+  productTypes:   Object;
+  state:          string;
+  ptIndex:        number;
 
   constructor(private http: Http,private productListService: ProductListService,private router: Router) {}
 

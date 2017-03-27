@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Router } from '@angular/router';
 import { ProductListService }  from '../../../app/service/productList.service';
@@ -10,14 +10,16 @@ import { ProductListService }  from '../../../app/service/productList.service';
   })
 export class InsuranceDetailComponent implements OnInit {
 
-    statusText;
-    detailInfo: Object;
-    headerParam: Object;
-    productImfor: Array<any>;
-    list: Array<Object>;
-    sList: Array<Object>;
-    status: Object;
-    extraList: Array<string>;
+    @Input() param: Object;
+
+    statusText:     Object;
+    detailInfo:     Object;
+    headerParam:    Object;
+    productImfor:   Array<any>;
+    list:           Array<Object>;
+    sList:          Array<Object>;
+    status:         Object;
+    extraList:      Array<string>;
 
     constructor(private http: Http,private productListService: ProductListService, 
                 private router: Router) {}

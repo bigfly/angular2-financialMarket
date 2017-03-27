@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'hotProduct',  component: HotProductComponent },
   { path: 'productList',  component: ProductListComponent },
   { path: 'myProduct',  component: MyProductComponent },
-  { path: 'detail/:businessType',  component: IndexDetailComponent },
+  { path: 'detail/:businessType/:productId',  component: IndexDetailComponent },
 ];
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],

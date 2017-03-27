@@ -1,6 +1,6 @@
 
-<app-fix-detail *ngIf="businessType == 1"></app-fix-detail>
+<app-fix-detail *ngIf="param?.businessType == 1" [param]="param"></app-fix-detail>
 
-<app-insurance-detail *ngIf="businessType == 2"></app-insurance-detail>
+<app-insurance-detail *ngIf="param?.businessType == 2" [param]="param"></app-insurance-detail>
 
-<app-fund-detail *ngIf="businessType == 3"></app-fund-detail>
+<app-fund-detail *ngIf="param?.businessType == 3" [param]="param"></app-fund-detail>

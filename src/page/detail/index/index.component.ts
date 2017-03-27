@@ -11,14 +11,21 @@ import { AlertController } from 'ionic-angular';
   })
 export class IndexDetailComponent implements OnInit {
 
-  businessType: String;
+  // productId: String
+  // businessType: String;
+  param: Object;
 
   constructor(private http: Http, private router: ActivatedRoute, private productListService: ProductListService) {}
 
   ngOnInit(): void {
       let that = this;
       this.router.params.subscribe(function(params){
-        that.businessType  = params['businessType'];
+        // that.businessType  = params['businessType'];
+        // that.param = {
+        //   businessType: that.businessType,
+        //   productId: that.productId
+        // }
+        that.param = params;
       });
   }
 

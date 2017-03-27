@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Router } from '@angular/router';
 import { ProductListService }  from '../../../app/service/productList.service';
@@ -10,13 +10,17 @@ import { ProductListService }  from '../../../app/service/productList.service';
   })
 export class FundDetailComponent implements OnInit {
 
-    headerParam;
-    clicked: Number;
-    urls: Array<Object>;
-    echartData: Object;
-    option: Object;
-    state: Number;
-    test;
+    @Input() param:        Object;
+    @Input() buttonStatus: Object;
+    @Input() subButtonStatus: Object;
+
+
+    headerParam: Object;
+    clicked:     Number;
+    state:       Number;
+    urls:        Array<Object>;
+    echartData:  Object;
+    option:      Object;
 
     constructor(private http: Http,private productListService: ProductListService, 
                 private router: Router) {}
@@ -29,6 +33,7 @@ export class FundDetailComponent implements OnInit {
     initData(): void {
         this.clicked = 1;
         this.state = 1;
+        this.buttonStatus = 1;
     }
 
     getData(): void{
@@ -57,6 +62,16 @@ export class FundDetailComponent implements OnInit {
             that.headerParam = Object.assign(detail,{
               risk: ['', '低风险', '较低风险', '适中风险', '较高风险', '高风险']
             });
+
+            that.buttonStatus = {
+                type : '1',
+                text : '立即买入'
+            };
+
+            that.subButtonStatus = {
+                type : '1',
+                text : '申购费率' + +detail.discount * 10 + '折'
+            }
 
         });
 
@@ -89,7 +104,7 @@ export class FundDetailComponent implements OnInit {
 
     renderData(fdata, sdata, type): void{
         let eData = this.echartData;
-        if (type === 1){
+        if (type === 1) {
             eData['xAxis'].data = fdata.timeLine;
             eData['series'][0].data = fdata.value;
             eData['series'][1].data = sdata && sdata.value;
@@ -108,6 +123,5 @@ export class FundDetailComponent implements OnInit {
         }
         this.option = Object.assign({}, eData);
     }
-    
 
 }

@@ -11,18 +11,14 @@ import { AlertController } from 'ionic-angular';
   })
 export class HotProductComponent implements OnInit {
 
-  status: Number;
   showContent: Number;
   hotProducts: {};
-  active: string;
   state: string;
-  test: string;
 
   constructor(private http: Http,private productListService: ProductListService, 
               private router: Router,private alertCtrl: AlertController) {}
 
   ngOnInit(): void {
-    this.status = 1;
     this.showContent = 1;
     this.state = 'hot';
     this.getData();
@@ -36,7 +32,7 @@ export class HotProductComponent implements OnInit {
   }
 
   clickProduct(product): void {
-    this.router.navigate(['detail/' + product['businessType']]);
+    this.router.navigate(['detail/' + product['businessType'] + '/' + product['productId']]);
   }
 
 }

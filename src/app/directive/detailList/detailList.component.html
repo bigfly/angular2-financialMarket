@@ -1,5 +1,5 @@
 
-<div *ngIf='type == 1'>
+<div *ngIf='type == 1' class="type1">
     <div class="detailItem" *ngFor="let remark of list;let i = index;">
         <div class="contentContainer">
             <div class="titleImage bg{{remark?.bg}}"></div><span class="titleTip">{{ remark?.title }}</span>
@@ -8,7 +8,7 @@
     </div>
 </div>
 
-<div class='detailList' *ngIf="type == 2">
+<!--<div class='detailList' *ngIf="type == 2">
     <div class="contentContainer">
         <div class="titleImage"></div><span class="imgTitle">产品信息</span>
         <div class="tableContainer" *ngFor="let item of productImfor" >
@@ -22,9 +22,9 @@
         </div>
     </div>
     <div class="relativePaper" (click)="toProtocol()" id="agreementUrl">查看相关文件</div>
-</div>
+</div>-->
 
-<div class="protocolContainer" *ngIf="type == 3">
+<div class="type2" *ngIf="type == 2">
     <div class="introduceContainer" (click)="click()" *ngFor="let url of urls">
         <p class="title">{{url.title}}</p> 
         <div class="arrowContain">

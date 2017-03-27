@@ -1,111 +1,88 @@
 @import '../../app.component.scss';
 
 // type = 1
-.detailItem {
-    background: #fff;
-    .contentContainer {
-        margin-top: 10px;
-        overflow: hidden;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        
-        .bgProductExplain {
-            background: url("/src/images/productExplain.png") no-repeat;
-            background-size: 100% 100%;
-            width: 10px;
-            height: 11px;
-            position: relative;
-            top: 1px;
-        }
-        .bgQualifications {
-            background: url("/src/images/qualifications.png") no-repeat;
-            background-size: 100% 100%;
-            width: 11px;
-            height: 13px;
-            position: relative;
-            top: -1px;
-        }
-        .bgBackIntro {
-            background: url("/src/images/backIntro.png") no-repeat;
-            background-size: 100% 100%;
-            width: 12.5px;
-            height: 12px;
-        }
-        .bgMoneyTip {
-            background: url("/src/images/moneyTip.png") no-repeat;
-            background-size: 100% 100%;
-            width: 11px;
-            height: 13px;
-        }
-        .bgBuyBack {
-            background: url("/src/images/buyBack.png") no-repeat;
-            background-size: 100% 100%;
-            width: 12.5px;
-            height: 12px;
-        }
-        .bgLocationTip {
-            width: 12px;
-            height: 14px;
-            background: url("/src/images/locationTip.png") no-repeat;
-            background-size: 100% 100%;
-            position: relative;
-            top: -1px;
-        }
+.type1{
+    .detailItem {
+        background: #fff;
+        .contentContainer {
+            margin-top: 10px;
+            overflow: hidden;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            
+            .bgProductExplain {
+                background: url("/src/images/productExplain.png") no-repeat;
+                background-size: 100% 100%;
+                width: 10px;
+                height: 11px;
+                position: relative;
+                top: 1px;
+            }
+            .bgQualifications {
+                background: url("/src/images/qualifications.png") no-repeat;
+                background-size: 100% 100%;
+                width: 11px;
+                height: 13px;
+                position: relative;
+                top: -1px;
+            }
+            .bgBackIntro {
+                background: url("/src/images/backIntro.png") no-repeat;
+                background-size: 100% 100%;
+                width: 12.5px;
+                height: 12px;
+            }
+            .bgMoneyTip {
+                background: url("/src/images/moneyTip.png") no-repeat;
+                background-size: 100% 100%;
+                width: 11px;
+                height: 13px;
+            }
+            .bgBuyBack {
+                background: url("/src/images/buyBack.png") no-repeat;
+                background-size: 100% 100%;
+                width: 12.5px;
+                height: 12px;
+            }
+            .bgLocationTip {
+                width: 12px;
+                height: 14px;
+                background: url("/src/images/locationTip.png") no-repeat;
+                background-size: 100% 100%;
+                position: relative;
+                top: -1px;
+            }
 
-        &.contentProduct {
-            height: 322px;
-            padding-top: 1px;
-        }
-        .titleImage {
-            margin-left: 15px;
-            float: left;
-        }
-        .titleTip{
-            float: left;
-            padding-left: 5px;
-            font-size: 12px;
-            line-height: 14px;
-            color: #4279d6;
-        }
-        .itemContent{
-            float: left;
-            font-size: 14px;
-            line-height: 22px;
-            clear: both;
-            padding: 10px 20px 0px 28px;
-            color: #646566;
+            &.contentProduct {
+                height: 322px;
+                padding-top: 1px;
+            }
+            .titleImage {
+                margin-left: 15px;
+                float: left;
+            }
+            .titleTip{
+                float: left;
+                padding-left: 5px;
+                font-size: 12px;
+                line-height: 14px;
+                color: #4279d6;
+            }
+            .itemContent{
+                float: left;
+                font-size: 14px;
+                line-height: 22px;
+                clear: both;
+                padding: 10px 20px 0px 28px;
+                color: #646566;
+            }
         }
     }
 }
+
 
 // type = 2
-.detailList{
-    overflow: hidden;
-    background: #fff;
-    margin-bottom: 10px;
-    .relativePaper{
-        width: 100%;
-        height: 50px;
-        line-height: 50px;
-        text-align: center;
-        font-size: 14px;
-        color: #4279d6;
-        @include onepx-border-top(#e6e8eb);
-    }
-    .noteContainer{
-        line-height: 20px;
-        padding: 15px 15px 15px 20px;
-        color: #afb0b3;
-        font-size: 12px;
-        position: relative;
-    }
-    .contentContainer{
-        margin-top: 20px;
-    }
-}
-
-// type = 3
-.protocolContainer{ 
+.type2{ 
     width: 100%;
     color:#19191a;
     font-size:14px;
@@ -144,109 +121,16 @@
 }
 
 // 通过这段代码对可改变<app-detail-list class=extra>这样使用此directive的组件内的样式
+:host(.fund){
+    .protocolContainer{
+        margin-bottom: 35px;
+    }
+}
 
-// 保险专用css
-:host(.insurance){
+:host(.m0){
     .detailItem{
         .contentContainer{
             margin-top: 0px;
-        }
-    }
-    .detailList{
-        margin-top: 10px;
-        .titleImage{
-            width: 10px;
-            height: 11px;
-            position: relative;
-            margin-left: 15px;
-            float: left;
-            top: 2px;
-            background: url(/src/images/productExplain.png) no-repeat;
-            background-size: 100% 100%;
-        }
-        .imgTitle{
-            color: #4279d6;
-            margin-left: 5px;
-            font-size: 12px;
-        }
-        .tableContainer {
-            font-size: 14px;
-            line-height: 14px;
-            clear: both;
-            padding: 10px 20px 0px 28px;
-            color: #646566;
-            .title {
-                display: inline-block;
-                width: 70px;
-            }
-            .tableContent {
-                padding-left: 14px;
-            }
-        }
-        .contentContainer{
-            .extra{
-                margin-top: 20px;
-                p:first-child{
-                    position: relative;
-                    top: 0px;
-                    line-height: 20px;
-                    color: #afb0b3;
-                    font-size: 12px;
-                    padding-left: 28px;
-                }
-                .noteContainer{
-                    padding: 0 15px 0 50px;
-                    top: -20px;
-                }
-            }
-        }
-    }
-}
-
-// 定期专用css
-:host(.fix){
-    .detailList{
-        .contentContainer{
-            .titleImage{
-                width: 10px;
-                height: 11px;
-                position: relative;
-                margin-left: 15px;
-                float: left;
-                top: 4px;
-                background: url(/src/images/productExplain.png) no-repeat;
-                background-size: 100% 100%;
-            }
-            .imgTitle{
-                color: #4279d6;
-                margin-left: 5px;
-            }
-
-            .tableContainer{
-                padding: 17px 20px 17px 5px;
-                margin-left: 15px;
-                font-size: 14px;
-                color: #19191a;
-                clear: both;
-                line-height: 14px;
-                height: 48px;
-                @include onepx-border-bottom(#e6e8eb);
-                
-                .title{
-                    float: left;
-                }
-                .content{
-                    float: right;
-                }
-            }
-        }
-    }
-}
-
-:host(.m10){
-    .detailItem{
-        .contentContainer{
-            margin-top: 10px;
         }
     }
 }

@@ -2,6 +2,7 @@
 
     <app-detail-header [headerParam]='headerParam' [type]="2"></app-detail-header>
 
+    <!--<div *ngIf="param?.businessType == 3">-->
     <div class="stateTabContaienr">
         <div class="tab" (click)="changeState(1)" [ngClass]="{'showSum' : +state == 1}">累计收益率</div>
         <div class="tab" (click)="changeState(2)" [ngClass]="{'showSum' : +state == 2}">单位净值</div>
@@ -28,11 +29,18 @@
             <span class="otherNum"  [ngClass]="{'plus' : +echartData?.monthChange>0,'equal' : +echartData?.monthChange==0,'minus' : +echartData?.monthChange<0}"><span *ngIf="echartData?.monthChange>0">+</span>{{echartData?.monthChange}}%</span>
         </p>
     </div>
+    <!--</div>-->
 
     <app-echart [option]='option'></app-echart>
 
-    <!--<app-test-directive [test]="test"></app-test-directive>-->
-
-    <app-detail-list [urls]='urls' class="fund" [type]='3'></app-detail-list>
+    <app-detail-list [urls]='urls' class="fund" [type]='2'></app-detail-list>
     
 </ion-content>
+
+<ion-footer align-title="center">
+    <app-footer-button [status]='buttonStatus'></app-footer-button>   
+</ion-footer>
+
+<ion-footer align-title="center" class="fm-sf">
+    <app-footer-button [status]='subButtonStatus' class="fundSubButton"></app-footer-button>   
+</ion-footer>

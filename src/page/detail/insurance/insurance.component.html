@@ -1,12 +1,26 @@
-<ion-content class="productDetail">
+<ion-content class="insuranceDetail">
 
     <app-detail-header [headerParam]='headerParam' [type]='1'></app-detail-header>
 
-    <app-detail-list [list]='list' class="insurance" [type]='1'></app-detail-list>
+    <app-detail-list [list]='list' class="m0" [type]='1'></app-detail-list>
 
-    <app-detail-list class="insurance" [type]='2' [productImfor]='productImfor' [extraList]='extraList'></app-detail-list>
+    <div class='detailList mt10'>
+        <div class="contentContainer mt10">
+            <div class="titleImage"></div><span class="imgTitle">产品信息</span>
+            <div class="tableContainer" *ngFor="let item of productImfor" >
+                <span class="title">{{ item?.title }}</span>
+                <span class="content">{{ item?.content }}</span>
+            </div>
+            <div class="extra">
+                <p class="noteContainer" *ngFor="let p of extraList">
+                    {{p}}
+                </p>
+            </div>
+        </div>
+        <div class="relativePaper" (click)="toProtocol()" id="agreementUrl">查看相关文件</div>
+    </div>
 
-    <app-detail-list [list]='sList' class="insurance m10" [type]='1'></app-detail-list>
+    <app-detail-list [list]='sList' class="insurance" [type]='1'></app-detail-list>
 
     <div class='detailItem detailChart'>
         <div class="contentContainer">
@@ -47,7 +61,7 @@
 
 </ion-content>
 
-<ion-footer align-title="center" class="fm-button">
+<ion-footer align-title="center">
     
     <app-footer-button [status]='status'></app-footer-button>     
 

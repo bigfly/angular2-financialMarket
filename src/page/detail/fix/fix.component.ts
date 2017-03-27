@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Router } from '@angular/router';
 import { ProductListService }  from '../../../app/service/productList.service';
@@ -10,13 +10,16 @@ import { ProductListService }  from '../../../app/service/productList.service';
   })
 export class FixDetailComponent implements OnInit {
 
-    list;
-    statusText;
-    detailInfo: Object;
-    headerParam: Object;
-    status: Object;
+    @Input() param: Object;
+
+    list:         any;
+    statusText:   Object;
+    detailInfo:   Object;
+    headerParam:  Object;
+    status:       Object;
     productImfor: Array<any>;
-    extraList: Array<string>;
+    extraList:    Array<string>;
+
 
     constructor(private http: Http,private productListService: ProductListService, 
                 private router: Router) {}
@@ -64,7 +67,6 @@ export class FixDetailComponent implements OnInit {
             // enum gggg {
             //     ProductExplain,
             //     Qualifications
-                
             // }
             // gggg.Qualifications
 

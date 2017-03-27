@@ -16,8 +16,8 @@
     span{ 
         text-align: center;
         width: 25%;
-        display: inline-block;
         float: left;
+        display: inline-block;
         color: #979899;
         background: #fff;
         height:23px;
@@ -103,4 +103,18 @@
     span{
         float: left;
     }
+}
+
+ion-footer{
+    margin: 0;
+    padding: 0;
+    height: 48px;
+    background: #fff;
+}
+.fm-sf{
+    bottom: 54px;
+    background: transparent;
+    margin: 0 auto;
+    height: 20px;
+    border-radius: 10px;
 }

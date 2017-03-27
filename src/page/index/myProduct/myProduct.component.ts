@@ -11,9 +11,9 @@ import {Router } from '@angular/router';
   })
 export class MyProductComponent implements OnInit {
 
-  state: String;
+  state:        String;
   productTypes: Object;
-  data: {};
+  data:         Object;
 
   constructor(private http: Http,private productListService: ProductListService,private router: Router) {}
 
@@ -26,22 +26,8 @@ export class MyProductComponent implements OnInit {
         '4': '基金'
     };
     this.state = 'my';
-    // 右上角
-    // let hasPlugin = window.RightNavigationBar && window.RightNavigationBar.setRightNavigationItem;
-    // if (hasPlugin) {
-    //     window.rightBarCallback = function() {
-    //         $state.go('jdbAppTradeFinancialMarketxRecord');
-    //     };
-    // }
-
     this.getData();
-    // setRightBar('交易记录');
   }
-
-  // 离开
-  // $scope.$on('$ionicView.beforeLeave', function () {
-  //     setRightBar();
-  // });
 
   /**
    * @desc 请求数据
@@ -66,11 +52,6 @@ export class MyProductComponent implements OnInit {
   goDetail(type):void {
     this.router.navigate(['OwnProduct']);
   };
-
-  setRightBar(title): void{
-      // var callback = 'rightBarCallback';
-      // hasPlugin && RightNavigationBar.setRightNavigationItem(title, '', callback, '', angular.noop, angular.noop);
-  }
 
 }
 

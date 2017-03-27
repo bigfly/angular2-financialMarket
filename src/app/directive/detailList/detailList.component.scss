@@ -122,7 +122,7 @@
 
 // 通过这段代码对可改变<app-detail-list class=extra>这样使用此directive的组件内的样式
 :host(.fund){
-    .protocolContainer{
+    .type2{
         margin-bottom: 35px;
     }
 }

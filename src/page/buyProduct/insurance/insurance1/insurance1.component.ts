@@ -17,6 +17,7 @@ export class Insurance1Component implements OnChanges {
     list1:    Array<Object>;
     status:   Object;
     chosed:   any;
+    protocol: Object;
 
 
     constructor(private productListService: ProductListService) {}
@@ -28,6 +29,21 @@ export class Insurance1Component implements OnChanges {
 
     initData() {
         this.chosed = false;
+        this.protocol = {
+            pre: '本人已阅读',
+            mid: '产品及购买说明',
+            after: '且理解上述内容，签约地点为北京',
+            openUrl: [{
+                text: '1',
+                url : 'url1'
+            },{
+                text: '2',
+                url : 'url2'
+            },{
+                text: '3',
+                url : 'url4'
+            }]
+        }
     }
 
     RenderData() {
@@ -79,12 +95,15 @@ export class Insurance1Component implements OnChanges {
         };
     }
 
-    protocol() {
-        this.chosed = !this.chosed;
-        this.status = Object.assign({}, {
-            type : +this.chosed ? 1 : 2,
-            text : '购买'
-        });
+    updateChosed(chosed) {
+        // 接收子組件選中消息并更新當前component（把購買按鈕變成可點擊態）
+        this.chosed = chosed;
+        this.status = {
+            type: + this.chosed
+                ? 1
+                : 2,
+            text: '购买'
+        };
     }
 
 }

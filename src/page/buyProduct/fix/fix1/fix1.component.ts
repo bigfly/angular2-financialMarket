@@ -27,14 +27,24 @@ export class Fix1Component implements OnChanges {
         this.protocol = {
             pre: '已阅读并同意',
             mid: '《借款及担保协议》',
-            after: ''
+            after: '',
+            openUrl: [{
+                text: '1',
+                url : 'url1'
+            },{
+                text: '2',
+                url : 'url2'
+            },{
+                text: '3',
+                url : 'url4'
+            }]
         }
     }
 
     RenderData() {
         if (this.param) {
             let productDetail = this.param['productDetail'];
-            //配置第一個列表
+            // 配置第一個列表
             this.list = [
                 {
                     left: '剩余金额',

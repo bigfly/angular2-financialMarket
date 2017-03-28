@@ -1,6 +1,10 @@
-<p  class="type1">
-    <span class="box" (click)="protocol()" [ngClass]="{chosed: chosed}" ></span>
-    <span class="pre">{{param?.pre}}</span>
-    <span class="mid">{{param?.mid}}</span>
-    <span class="after">{{param?.after}}</span>
-</p>
+<div class="type1">
+    <span class="box" (click)="clickProtocol()" [ngClass]="{chosed: chosed}" ></span>
+    <p class="text">
+        <!--<span class="box" (click)="clickProtocol()" [ngClass]="{chosed: chosed}" ></span>-->
+        <!--<span class="pre">{{param?.pre}}</span>
+        <span class="mid" (click)="showProtocol(param?.openUrl)">{{param?.mid}}</span>
+        <span class="after">{{param?.after}}</span>-->
+        {{param?.pre}}<span class="mid" (click)="showProtocol(param?.openUrl)">{{param?.mid}}</span>{{param?.after}}
+    </p>
+</div>

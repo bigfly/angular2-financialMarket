@@ -12,7 +12,7 @@ export class FixBuyComponent implements OnInit {
 
   @Input() routerParam: Object;
 
-  param:       Object;
+  param: Object;
 
   constructor(private productListService: ProductListService) {}
 

@@ -18,7 +18,20 @@
 </div>
 
 <ul class="type3" *ngIf="type == 3">
-    <li *ngFor="let item of list">{{ item.left }}
-        <div class="fr"><span class="size">{{ item.right }}</span><span>{{ item.unit }}</span></div>
+    <li *ngFor="let item of list">
+        <span class="fl l">{{ item?.left }} </span>
+        <div class="liContainer">
+            <div class="fr r" *ngIf="!item?.needArrow">
+                <span class="s1">{{ item?.right }}</span>
+                <span class="s2">{{ item?.unit }}</span>
+            </div>
+            <div class="fr r" *ngIf="item?.needArrow">
+                <span class="arrowText">{{item?.arrowText}}</span>
+                <span class="arrow"></span>
+            </div>
+            <div class="input-container">
+                <input type="text" class="text" placeholder="{{item?.placeholder}}" *ngIf="item?.input" />
+            </div>
+        </div>
     </li>
 </ul>

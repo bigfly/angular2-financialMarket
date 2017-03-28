@@ -1,6 +1,7 @@
+<ion-content class="buyIndex">
+    <app-fix-buy *ngIf="routerParam?.productType == 2" [routerParam]='routerParam'></app-fix-buy>
 
-<app-fix-buy *ngIf="routerParam?.productType == 2" [routerParam]='routerParam'></app-fix-buy>
+    <app-insurance-buy *ngIf="routerParam?.productType == 3" [routerParam]='routerParam'></app-insurance-buy>
 
-<app-insurance-buy *ngIf="routerParam?.productType == 3" [routerParam]='routerParam'></app-insurance-buy>
-
-<app-fund-buy *ngIf="routerParam?.productType == 4" [routerParam]='routerParam'></app-fund-buy>
+    <app-fund-buy *ngIf="routerParam?.productType == 4" [routerParam]='routerParam'></app-fund-buy>
+</ion-content>

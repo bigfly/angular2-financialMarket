@@ -18,7 +18,8 @@ import { Fix1Component } from '../fix/fix1/fix1.component';
 @NgModule({
   imports: [
     CommonModule,
-    DirectiveModule
+    DirectiveModule,
+    IonicModule.forRoot(BuyProductComponent)
     ],
   declarations: [
     BuyProductComponent,

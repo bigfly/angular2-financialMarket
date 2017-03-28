@@ -123,17 +123,61 @@
 .type3{
     color: #646566;
     font-size: 14px;
+    list-style: none;
+    background: #fff;
+    @include onepx-border-bottom(#e3e4e6);
+    
     li {
-        padding: 4%;
-        padding-left: 0;
-        margin-left: 4%;
+        margin-left: 17px;
+        line-height: 52px;
         color: #19191a;
         font-size: 16px;
+        height: 52px;
+        .liContainer{
+            width: auto;
+            padding-right: 20px;
+            @include onepx-border-bottom(#e3e4e6);
+        }
+        .l{
+            width: 140px;
+        }
+        .r{
+            margin-left: 5px;
+        }
     }
-    .size {
+    .s1 {
         color: #19191a;
         font-size: 16px;
         padding-right: 2px;
+    }
+    .s2{
+        float: right;
+    }
+    .arrowText{
+        font-size: 16px;
+        color: #b1b1b3;
+    }
+    .arrow{
+        display:inline-block;
+        width:7.5px;
+        height:14px;
+        background: url(/src/images/greyArrow.jpg) no-repeat;
+        background-size: 100%,100%;
+        position: relative;
+        top: 2px;
+        margin-left: 5px;
+    }
+    .input-container{
+        width: auto;
+        overflow: hidden;
+        input{
+            width: 100%;
+            text-align: right;
+            &::-webkit-input-placeholder {
+                text-align: right;
+                direction: rtl;
+            }
+        }
     }
 }
 
@@ -149,5 +193,16 @@
         .contentContainer{
             margin-top: 0px;
         }
+    }
+}
+
+:host(.fix1){
+    li{
+        .l{
+            width: 90px;
+        }
+    }
+    ul{
+        margin-top:18px;
     }
 }

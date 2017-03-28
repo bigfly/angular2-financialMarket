@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { EchartsNg2Module } from 'echarts-ng2';
-import { DetailHeaderComponent }  from './detailHeader/detailHeader.component';
-import { DetailListComponent }  from './detailList/detailList.component';
+import { HeaderComponent }  from './Header/Header.component';
+import { ListComponent }  from './List/List.component';
 import { FooterButtonComponent }  from './footerButton/footerButton.component';
+import { ProtocolComponent }  from './Protocol/Protocol.component';
 import { EchartComponent }  from './echart/echart.component';
 
 
@@ -17,16 +18,18 @@ import { EchartComponent }  from './echart/echart.component';
     BrowserModule
   ],
   declarations: [
-    DetailHeaderComponent,
-    DetailListComponent,
+    HeaderComponent,
+    ListComponent,
     FooterButtonComponent,
-    EchartComponent
+    EchartComponent,
+    ProtocolComponent
   ],
   exports: [
-    DetailHeaderComponent,
-    DetailListComponent,
+    HeaderComponent,
+    ListComponent,
     FooterButtonComponent,
-    EchartComponent
+    EchartComponent,
+    ProtocolComponent
   ]
 })
 export class DirectiveModule {}

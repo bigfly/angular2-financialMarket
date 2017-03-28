@@ -1,8 +1,8 @@
 <ion-content class="insuranceDetail">
 
-    <app-detail-header [headerParam]='headerParam' [type]='1'></app-detail-header>
+    <app-header [headerParam]='headerParam' [type]='1'></app-header>
 
-    <app-detail-list [list]='list' class="m0" [type]='1'></app-detail-list>
+    <app-list [list]='list' class="m0" [type]='1'></app-list>
 
     <div class='detailList mt10'>
         <div class="contentContainer mt10">
@@ -20,7 +20,7 @@
         <div class="relativePaper" (click)="toProtocol()" id="agreementUrl">查看相关文件</div>
     </div>
 
-    <app-detail-list [list]='sList' class="insurance" [type]='1'></app-detail-list>
+    <app-list [list]='sList' class="insurance" [type]='1'></app-list>
 
     <div class='detailItem detailChart'>
         <div class="contentContainer">

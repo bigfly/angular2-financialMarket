@@ -12,7 +12,7 @@ export class InsuranceBuyComponent implements OnInit {
 
   @Input() routerParam: Object;
 
-  param:       Object;
+  param: Object;
 
   constructor(private productListService: ProductListService) {}
 
@@ -23,7 +23,8 @@ export class InsuranceBuyComponent implements OnInit {
   getData() {
       let that = this;
       this.productListService.getList('fixBuy').then(function(res){
-          that.param = res['productDetail'];
+          that.param = res['data'];
+          console.log(that.param);
       });
   }
 

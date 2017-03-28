@@ -1,6 +1,6 @@
 <ion-content class="fundDetail">
 
-    <app-detail-header [headerParam]='headerParam' [type]="2"></app-detail-header>
+    <app-header [headerParam]='headerParam' [type]="2"></app-header>
 
     <div class="stateTabContaienr">
         <div class="tab" (click)="changeState(1)" [ngClass]="{'showSum' : +state == 1}">累计收益率</div>
@@ -31,7 +31,7 @@
 
     <app-echart [option]='option'></app-echart>
 
-    <app-detail-list [urls]='urls' class="fund" [type]='2'></app-detail-list>
+    <app-list [urls]='urls' class="fund" [type]='2'></app-list>
     
 </ion-content>
 

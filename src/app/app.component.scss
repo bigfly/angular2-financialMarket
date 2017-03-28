@@ -15,15 +15,15 @@ ion-content{
     background: #f5f7fa;
 }
 
-input{
-    border: 0
+input,textarea{
+    border: 0;
 }
 
 input::-webkit-input-placeholder{
     color: #b1b1b3;
 }
 
-p,span,h1,h2,h3,h4,h5,h6,div,ul,li,input{
+p,span,h1,h2,h3,h4,h5,h6,div,ul,li,input,textarea{
     padding: 0;
     margin: 0;
 }

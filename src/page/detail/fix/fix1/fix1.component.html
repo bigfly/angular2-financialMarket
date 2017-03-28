@@ -1,6 +1,6 @@
 <ion-content class="fixDetail">
 
-    <app-detail-header [headerParam]='headerParam' [type]="1"></app-detail-header>
+    <app-header [headerParam]='headerParam' [type]="1"></app-header>
 
     <div class='detailList'>
         <div class="contentContainer">
@@ -18,9 +18,9 @@
         <div class="relativePaper" (click)="toProtocol()" id="agreementUrl">查看相关文件</div>
     </div>
 
-    <app-detail-list class="fix" [type]='2' [productImfor]='productImfor' [extraList]='extraList'></app-detail-list>
+    <app-list class="fix" [type]='2' [productImfor]='productImfor' [extraList]='extraList'></app-list>
 
-    <app-detail-list [list]='list' class="fix" [type]='1'></app-detail-list>
+    <app-list [list]='list' class="fix" [type]='1'></app-list>
 
 </ion-content>
 

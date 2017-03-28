@@ -1,30 +1,90 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Router } from '@angular/router';
-import { ProductListService }  from '../../../app/service/productList.service';
+import { ProductListService }  from '../../../../app/service/productList.service';
 
 @Component({
-    selector: 'app-insurance-buy',
-    styleUrls: ['./insurance.component.scss'], 
-    templateUrl: './insurance.component.html'
+    selector: 'app-insurance1',
+    styleUrls: ['./insurance1.component.scss'], 
+    templateUrl: './insurance1.component.html'
   })
-export class InsuranceBuyComponent implements OnInit {
+export class Insurance1Component implements OnChanges {
 
-  @Input() routerParam: Object;
+    @Input() routerParam: Object;
+    @Input() param:       Object;
 
-  param:       Object;
+    list:     Array<Object>;
+    list1:    Array<Object>;
+    status:   Object;
+    chosed:   any;
 
-  constructor(private productListService: ProductListService) {}
 
-  ngOnInit(): void {
-      this.getData();
-  }
+    constructor(private productListService: ProductListService) {}
 
-  getData() {
-      let that = this;
-      this.productListService.getList('fixBuy').then(function(res){
-          that.param = res['productDetail'];
-      });
-  }
+    ngOnChanges(): void {
+        this.initData();
+        this.RenderData();
+    }
+
+    initData() {
+        this.chosed = false;
+    }
+
+    RenderData() {
+        if (this.param) {
+            let productDetail = this.param['productDetail'];
+            this.list = [
+                {
+                    left : '购买金额',
+                    right: '10',
+                    unit : '元',
+                }
+            ];
+            this.list1 = [
+                {
+                    left : '真实姓名',
+                    right: '真的啊',
+                },
+                {
+                    left : '身份证号',
+                    right: '123456*****',
+                },
+                {
+                    left : '手机号码',
+                    input: true,
+                    placeholder: '请输入手机号码'
+                },
+                {
+                    left : '电子邮箱',
+                    input: true,
+                    placeholder: '请输入电子邮箱'
+                },
+                {
+                    left: '常住区域',
+                    needArrow: true,
+                    placeholder: '请选择省、市、区'
+                },
+                {
+                    left: '详细地址',
+                    textareaPH: '请输入详细地址',
+                    textarea : true
+                },
+            ];
+        }
+
+        // 配置按钮
+        this.status = {
+            type : +this.chosed ? 1 : 2,
+            text : '购买'
+        };
+    }
+
+    protocol() {
+        this.chosed = !this.chosed;
+        this.status = Object.assign({}, {
+            type : +this.chosed ? 1 : 2,
+            text : '购买'
+        });
+    }
 
 }

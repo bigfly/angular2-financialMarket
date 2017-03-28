@@ -1,14 +1,10 @@
-<app-detail-list [type]='3' [list]='list'></app-detail-list>
+<app-list [type]='3' [list]='list'></app-list>
 
-<app-detail-list [type]='3' class="fix1" [list]='list1'></app-detail-list>
+<app-list [type]='3' class="fix1" [list]='list1'></app-list>
 
 <p class="desc-right">到期所得收益<span>{{param?.profit}}</span>元</p>
 
-<p class="protocol">
-    <span class="box" (click)="protocol()" [ngClass]="{chosed: chosed}" ></span>
-    <span class="text">已阅读并同意</span>
-    <span class="proText">《借款及担保协议》</span>
-</p>
+<app-protocol [chosed]="chosed" [param]="protocol" (updateChosed)="updateChosed($event)"></app-protocol>
 
 <ion-footer align-title="center">
     <app-footer-button [status]='status' [url]="url"></app-footer-button>   

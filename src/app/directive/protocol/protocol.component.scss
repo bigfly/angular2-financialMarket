@@ -1,0 +1,32 @@
+@import '../../app.component.scss';
+.type1{
+    padding-left: 15px;
+    overflow: hidden;
+    .box{
+        width: 19px;
+        height: 19px;
+        display: inline-block;
+        background: #fff;
+        border: 1px solid #e1e3e6;
+        border-radius: 3px;
+        vertical-align: middle;
+    }
+    .chosed{
+        background: url(/src/images/on.png);
+        background-size: 100% 100%;
+    }
+    .pre{
+        padding-left: 3px;
+    }
+    span{
+        color: #555;
+        font-size: 12px;
+        float: left;
+    }
+    .mid{
+        color: #3479df;
+    }
+    .after{
+
+    }
+}

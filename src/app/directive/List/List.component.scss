@@ -1,0 +1,239 @@
+@import '../../app.component.scss';
+
+// type = 1 定期和保险详情页列表
+.type1{
+    .detailItem {
+        background: #fff;
+        margin-bottom: 10px;
+        .contentContainer {
+            overflow: hidden;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            
+            .bgProductExplain {
+                background: url("/src/images/productExplain.png") no-repeat;
+                background-size: 100% 100%;
+                width: 10px;
+                height: 11px;
+                position: relative;
+                top: 1px;
+            }
+            .bgQualifications {
+                background: url("/src/images/qualifications.png") no-repeat;
+                background-size: 100% 100%;
+                width: 11px;
+                height: 13px;
+                position: relative;
+                top: -1px;
+            }
+            .bgBackIntro {
+                background: url("/src/images/backIntro.png") no-repeat;
+                background-size: 100% 100%;
+                width: 12.5px;
+                height: 12px;
+            }
+            .bgMoneyTip {
+                background: url("/src/images/moneyTip.png") no-repeat;
+                background-size: 100% 100%;
+                width: 11px;
+                height: 13px;
+            }
+            .bgBuyBack {
+                background: url("/src/images/buyBack.png") no-repeat;
+                background-size: 100% 100%;
+                width: 12.5px;
+                height: 12px;
+            }
+            .bgLocationTip {
+                width: 12px;
+                height: 14px;
+                background: url("/src/images/locationTip.png") no-repeat;
+                background-size: 100% 100%;
+                position: relative;
+                top: -1px;
+            }
+
+            &.contentProduct {
+                height: 322px;
+                padding-top: 1px;
+            }
+            .titleImage {
+                margin-left: 15px;
+                float: left;
+            }
+            .titleTip{
+                float: left;
+                padding-left: 5px;
+                font-size: 12px;
+                line-height: 14px;
+                color: #4279d6;
+            }
+            .itemContent{
+                float: left;
+                font-size: 14px;
+                line-height: 22px;
+                clear: both;
+                padding: 10px 20px 0px 28px;
+                color: #646566;
+            }
+        }
+    }
+}
+
+
+// type = 2 基金详情页跳转列表
+.type2{ 
+    width: 100%;
+    color:#19191a;
+    font-size:14px;
+    background:#fff;
+    margin-top: 10px;
+    @include onepx-border-horizontal(#e3e4e6);
+
+    .introduceContainer{ 
+        width: 100%;
+        height: 48px;
+        line-height:48px;
+        padding-left:15px;
+
+        .title{ 
+            width:60%;
+            float: left;
+            @include onepx-border-bottom(#e3e4e6);
+        }
+        .arrowContain{ 
+            position: relative;
+            width: 40%;
+            float: left;
+            @include onepx-border-bottom(#e3e4e6);
+
+            .arrow{ 
+                width: 6px;
+                height: 10.5px;
+                background: url(/src/images/arrow.jpg) no-repeat;
+                background-size: 100%,100%;
+                position: absolute;
+                right: 15px;
+                top: 17px;
+            }
+        }
+    }
+}
+
+// type = 3 保险和定期购买页列表
+.type3{
+    color: #646566;
+    font-size: 14px;
+    list-style: none;
+    background: #fff;
+    @include onepx-border-bottom(#e3e4e6);
+    
+    li {
+        margin-left: 17px;
+        line-height: 52px;
+        color: #19191a;
+        font-size: 16px;
+        height: 52px;
+        margin-top: 1px;
+        @include onepx-border-bottom(#e3e4e6);
+        .liContainer{
+            width: auto;
+            padding-right: 20px;
+        }
+        .l{
+            width: 140px;
+        }
+        .r{
+            margin-left: 5px;
+        }
+    }
+    .s1 {
+        color: #19191a;
+        font-size: 16px;
+        padding-right: 2px;
+    }
+    .s2{
+        float: right;
+    }
+    .arrowText{
+        font-size: 16px;
+        color: #b1b1b3;
+    }
+    .arrow{
+        display:inline-block;
+        width:7.5px;
+        height:14px;
+        background: url(/src/images/greyArrow.jpg) no-repeat;
+        background-size: 100%,100%;
+        position: relative;
+        top: 2px;
+        margin-left: 5px;
+    }
+    .input-container{
+        width: auto;
+        overflow: hidden;
+        input{
+            width: 100%;
+            text-align: right;
+            &::-webkit-input-placeholder {
+                text-align: right;
+                direction: rtl;
+            }
+        }
+    }
+    .textarea-container{
+        width: auto;
+        overflow: hidden;
+        padding-top: 10px;
+        .detail-address{
+            width: 100%;
+            height: 40px;
+            line-height: 16px;
+            padding-right: 15px;
+            vertical-align: middle;
+            text-align: right;
+            &::-webkit-input-placeholder {
+                direction: rtl;
+                color: #b1b1b3;
+            }
+        }
+    }
+    .textareaHeight{
+        height: 60px;
+    }
+}
+
+// 通过这段代码对可改变<app-detail-list class=extra>这样使用此directive的组件内的样式
+:host(.fund){
+    .type2{
+        margin-bottom: 35px;
+    }
+}
+
+:host(.m0){
+    .detailItem{
+        margin-top: 0px;
+    }
+}
+
+:host(.fix1){
+    li{
+        .l{
+            width: 90px;
+        }
+    }
+    ul{
+        margin-top:18px;
+    }
+}
+
+:host(.insurance1){
+    ul{
+        margin-top: 10px;
+        li{
+            .l{
+                width: 80px;
+            }
+        }
+    }
+}

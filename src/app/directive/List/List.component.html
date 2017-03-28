@@ -1,0 +1,40 @@
+
+<div *ngIf='type == 1' class="type1">
+    <div class="detailItem" *ngFor="let remark of list;let i = index;">
+        <div class="contentContainer">
+            <div class="titleImage bg{{remark?.bg}}"></div><span class="titleTip">{{ remark?.title }}</span>
+            <p class="itemContent">{{ remark?.content }}</p>
+        </div>
+    </div>
+</div>
+
+<div class="type2" *ngIf="type == 2">
+    <div class="introduceContainer" (click)="click()" *ngFor="let url of urls">
+        <p class="title">{{url.title}}</p> 
+        <div class="arrowContain">
+            <div class="arrow"></div>
+        </div>
+    </div>
+</div>
+
+<ul class="type3" *ngIf="type == 3">
+    <li *ngFor="let item of list" [ngClass]="{textareaHeight : item?.textarea}">
+        <span class="fl l">{{ item?.left }} </span>
+        <div class="liContainer">
+            <div class="fr r" *ngIf="item?.right || item?.unit ">
+                <span class="s1">{{ item?.right }}</span>
+                <span class="s2">{{ item?.unit }}</span>
+            </div>
+            <div class="fr r" *ngIf="item?.needArrow">
+                <span class="arrowText">{{item?.arrowText}}</span>
+                <span class="arrow"></span>
+            </div>
+            <div class="input-container" *ngIf="item?.input">
+                <input type="text" class="text" placeholder="{{item?.placeholder}}" />
+            </div>
+            <div class="textarea-container" *ngIf="item?.textarea">
+                <textarea class="detail-address" placeholder="{{item?.textareaPH}}" ></textarea>
+            </div>
+        </div>
+    </li>
+</ul>

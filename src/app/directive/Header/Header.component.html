@@ -1,0 +1,36 @@
+
+<div class="bannerTop" *ngIf="type == 1">
+    <a href="javascript:return false;">
+        <p class="title licaiTitle">
+            <span class="middle"><span class="left">·</span>{{ headerParam?.productName }}<span class="right">·</span></span>
+        </p>
+        <p class="shortTitle">由{{headerParam?.companyName}}提供</p>
+        <p class="earnNum">
+            <span class="ammount">{{headerParam?.rate}}</span>
+            <span class="percent"> %</span>
+        </p>
+        <p class="earnTip">预期年化收益率</p>
+    </a>
+</div>
+
+<div class="fundTop" *ngIf="type == 2">
+    <div class="topContain">
+        <p class="title">{{headerParam?.fundName}}</p>
+        <p class="sline">
+            <span class="type ui-border-radiusGreyPD">{{headerParam?.fundType}}基金</span>
+            <span class="risk" [ngClass]="{low:headerParam?.riskLevel == 1,mid:headerParam?.riskLevel == 2 || headerParam?.riskLevel == 3 || headerParam?.riskLevel == 4,high : headerParam?.riskLevel == 5}">{{headerParam?.risk[headerParam?.riskLevel]}}</span>
+        </p>
+    </div>
+    <div class="datStatic"> 
+        <div class="statLeft">
+            <p class="riseText">日涨幅</p>
+            <p class="riseNum" [ngClass]="{plus:headerParam?.dayRate>0,equal:headerParam?.dayRate==0,minus:headerParam?.dayRate<0}">
+                <span *ngIf="+headerParam?.dayRate>0">+</span><span>{{+headerParam?.dayRate}}%</span>
+            </p>
+        </div>
+        <div class="statRight">
+            <p class="riseText">单位净值({{headerParam?.netValueDate}})</p>
+            <p class="riseNum">{{headerParam?.netValue}}</p>
+        </div>
+    </div>
+</div> 

@@ -10,8 +10,9 @@ import { ProductListService }  from '../../../../app/service/productList.service
   })
 export class Insurance1Component implements OnChanges {
 
-    @Input() param: Object;
+    @Input() param:       Object;
     @Input() routerParam: Object;
+    @Input() protocol:    Object;
 
     statusText:     Object;
     detailInfo:     Object;
@@ -22,6 +23,7 @@ export class Insurance1Component implements OnChanges {
     sList:          Array<Object>;
     status:         Object;
     extraList:      Array<string>;
+    urls:           Array<Object>;
 
     constructor(private http: Http,private productListService: ProductListService, 
                 private router: Router) {}
@@ -72,6 +74,25 @@ export class Insurance1Component implements OnChanges {
 
         this.url = 'buyProduct/' + this.routerParam['businessType'] + '/'
         + this.routerParam['productId'] + '/' + this.routerParam['productType'];
+
+        this.protocol = {
+            openUrl: [{
+                text: '1',
+                url : 'url1'
+            },{
+                text: '2',
+                url : 'url2'
+            },{
+                text: '3',
+                url : 'url4'
+            }],
+            text: '查看相关文件'
+        };
+
+        this.urls = [{
+            title: '免责声明',
+            url  : '234'
+        }];
 
     }
 

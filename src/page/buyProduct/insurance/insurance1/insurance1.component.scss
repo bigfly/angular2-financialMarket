@@ -1,1 +1,16 @@
 @import '../../../../app/app.component.scss';
+
+ion-footer{
+    position: relative;
+    top: 25px;
+    width: 93%;
+    margin: 0 auto;
+}
+.checkLimit{
+    font-size: 12px;
+    text-align: right;
+    padding-right: 18px;
+    position: relative;
+    top: 40px;
+    color: #387ef5;
+}

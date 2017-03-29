@@ -12,6 +12,7 @@ export class Fix1Component implements OnChanges {
 
     @Input() param:       Object;
     @Input() routerParam: Object;
+    @Input() protocol:    Object;
 
     list:         any;
     url:          String;
@@ -40,8 +41,24 @@ export class Fix1Component implements OnChanges {
             '2' : '去购买',
             '7' : '本标已完成，全额本息已到账'
         };
+
         this.url = 'buyProduct/' + this.routerParam['businessType'] + '/'
         + this.routerParam['productId'] + '/' + this.routerParam['productType'];
+
+        this.protocol = {
+            openUrl: [{
+                text: '1',
+                url : 'url1'
+            },{
+                text: '2',
+                url : 'url2'
+            },{
+                text: '3',
+                url : 'url4'
+            }],
+            text: '查看相关文件'
+        }
+
     }
 
     RenderData(): void{
@@ -99,6 +116,6 @@ export class Fix1Component implements OnChanges {
         };
 
     }
-
+    
 }
 

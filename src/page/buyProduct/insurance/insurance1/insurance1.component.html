@@ -3,5 +3,10 @@
 
 <app-list [type]='3' [list]='list1' class="insurance1"></app-list>
 
-<app-protocol [chosed]="chosed" [param]="protocol" class="insurance1" (updateChosed)="updateChosed($event)"></app-protocol>
+<app-protocol [chosed]="chosed" [type]="1" [param]="protocol" class="insurance1" (updateChosed)="updateChosed($event)"></app-protocol>
 
+<ion-footer align-title="center">
+    <app-footer-button [status]='status' [url]="url"></app-footer-button>   
+</ion-footer>
+
+<p class="checkLimit">查看限额</p>

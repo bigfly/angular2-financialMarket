@@ -11,6 +11,7 @@ export class ProtocolComponent implements OnChanges {
 
     @Input() param:  Object;
     @Input() chosed: any;
+    @Input() type:   Number;
 
     @Output() updateChosed: EventEmitter<number> = new EventEmitter();
 

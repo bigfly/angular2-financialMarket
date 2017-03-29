@@ -5,10 +5,15 @@
     .detailItem {
         background: #fff;
         margin-bottom: 10px;
+        z-index: -10;
+
+        padding-left: 15px;
+        
         .contentContainer {
             overflow: hidden;
             padding-top: 15px;
             padding-bottom: 15px;
+            @include onepx-border-horizontal(#e3e4e6);
             
             .bgProductExplain {
                 background: url("/src/images/productExplain.png") no-repeat;
@@ -58,7 +63,7 @@
                 padding-top: 1px;
             }
             .titleImage {
-                margin-left: 15px;
+                // margin-left: 15px;
                 float: left;
             }
             .titleTip{
@@ -73,7 +78,8 @@
                 font-size: 14px;
                 line-height: 22px;
                 clear: both;
-                padding: 10px 20px 0px 28px;
+                // padding: 10px 20px 0px 28px;
+                padding: 10px 20px 0px 15px;
                 color: #646566;
             }
         }
@@ -88,6 +94,7 @@
     font-size:14px;
     background:#fff;
     margin-top: 10px;
+    margin-bottom: 10px;
     @include onepx-border-horizontal(#e3e4e6);
 
     .introduceContainer{ 
@@ -203,36 +210,51 @@
 }
 
 // 通过这段代码对可改变<app-detail-list class=extra>这样使用此directive的组件内的样式
+:host(.m0){
+    .detailItem{
+        margin-bottom: 0px;
+    }
+}
+
+:host(.fix1){
+    .type3{
+        margin-top:18px;
+    }
+    li{
+        .l{
+            width: 90px;
+        }
+    }
+}
+
+:host(.insurance1){
+    .type3{
+        margin-top: 10px;
+        li{
+            .l{
+                width: 80px;
+            }
+        }
+    }
+}
+
 :host(.fund){
     .type2{
         margin-bottom: 35px;
     }
 }
 
-:host(.m0){
-    .detailItem{
-        margin-top: 0px;
-    }
-}
-
-:host(.fix1){
-    li{
-        .l{
-            width: 90px;
+:host(.insurance-detail-location){
+    .type1{
+        .detailItem{
+             @include onepx-border-horizontal(#e3e4e6);
         }
     }
-    ul{
-        margin-top:18px;
-    }
 }
-
-:host(.insurance1){
-    ul{
-        margin-top: 10px;
-        li{
-            .l{
-                width: 80px;
-            }
+:host(.fix1-detail){
+    .type1{
+        .detailItem{
+             @include onepx-border-horizontal(#e3e4e6);
         }
     }
 }

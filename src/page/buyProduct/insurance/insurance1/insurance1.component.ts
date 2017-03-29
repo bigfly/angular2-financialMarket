@@ -91,7 +91,7 @@ export class Insurance1Component implements OnChanges {
         // 配置按钮
         this.status = {
             type : +this.chosed ? 1 : 2,
-            text : '购买'
+            text : '提交'
         };
     }
 
@@ -102,7 +102,7 @@ export class Insurance1Component implements OnChanges {
             type: + this.chosed
                 ? 1
                 : 2,
-            text: '购买'
+            text: '提交'
         };
     }
 

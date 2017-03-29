@@ -5,18 +5,11 @@
 
     //产品信息
     .detailList{
-        overflow: hidden;
         background: #fff;
+        padding-top: 10px;
+        margin-top: 10px;
         margin-bottom: 10px;
-        .relativePaper{
-            width: 100%;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            font-size: 14px;
-            color: #4279d6;
-            @include onepx-border-top(#e6e8eb);
-        }
+        @include onepx-border-horizontal(#e6e8eb);
         .noteContainer{
             line-height: 20px;
             padding: 15px 15px 15px 20px;
@@ -69,13 +62,6 @@
                     top: -20px;
                 }
             }
-        }
-    }
-
-
-    .detailItem{
-        .contentContainer{
-            margin-top: 0px;
         }
     }
 
@@ -149,6 +135,13 @@
             }
         }
     }
+    .detailChart{
+        margin-top: -20px;
+        padding-left: 10px;
+        background: #fff;
+        height: 232px;
+    }
+
 }
 
 ion-footer{
@@ -157,19 +150,4 @@ ion-footer{
     padding: 10px 13px;
     border-radius: 3px;
     background: #fff;
-}
-
-.moneyTip{
-    width: 11px;
-    height: 13px;
-    background: url(/src/images/moneyTip.png) no-repeat;
-    background-size: 100% 100%;
-}
-
-.detailChart{
-    position: relative;
-    top: -20px;
-    padding-left: 10px;
-    background: #fff;
-    height: 232px;
 }

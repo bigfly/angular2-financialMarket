@@ -15,12 +15,12 @@
                 </p>
             </div>
         </div>
-        <div class="relativePaper" (click)="toProtocol()" id="agreementUrl">查看相关文件</div>
+        <app-protocol [param]="protocol" [type]='2'></app-protocol>
     </div>
 
-    <app-list class="fix" [type]='2' [productImfor]='productImfor' [extraList]='extraList'></app-list>
+    <!--<app-list class="fix" [type]='2' [productImfor]='productImfor' [extraList]='extraList'></app-list>-->
 
-    <app-list [list]='list' class="fix" [type]='1'></app-list>
+    <app-list [list]='list' class="fix1-detail" [type]='1'></app-list>
 
 </ion-content>
 

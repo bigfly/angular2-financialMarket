@@ -4,8 +4,8 @@
 
     <app-list [list]='list' class="m0" [type]='1'></app-list>
 
-    <div class='detailList mt10'>
-        <div class="contentContainer mt10">
+    <div class='detailList'>
+        <div class="contentContainer">
             <div class="titleImage"></div><span class="imgTitle">产品信息</span>
             <div class="tableContainer" *ngFor="let item of productImfor" >
                 <span class="title">{{ item?.title }}</span>
@@ -17,10 +17,10 @@
                 </p>
             </div>
         </div>
-        <div class="relativePaper" (click)="toProtocol()" id="agreementUrl">查看相关文件</div>
+        <app-protocol [param]="protocol" [type]='2'></app-protocol>
     </div>
 
-    <app-list [list]='sList' class="insurance" [type]='1'></app-list>
+    <app-list [list]='sList' class="insurance-detail-location" [type]='1'></app-list>
 
     <div class='detailItem detailChart'>
         <div class="contentContainer">
@@ -58,6 +58,8 @@
             </div>
         </div>
     </div>
+
+    <app-list [urls]='urls' class="insurance1" [type]='2'></app-list>
 
 </ion-content>
 

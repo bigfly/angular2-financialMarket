@@ -2,6 +2,7 @@ import {Component, OnInit, Input, OnChanges} from '@angular/core';
 import {Http, Response} from '@angular/http';
 import {Router} from '@angular/router';
 import {ProductListService} from '../../../../app/service/productList.service';
+import {Observable} from 'rxjs/Rx';
 
 @Component({selector: 'app-fix1', styleUrls: ['./fix1.component.scss'], templateUrl: './fix1.component.html'})
 export class Fix1Component implements OnChanges {
@@ -14,8 +15,12 @@ export class Fix1Component implements OnChanges {
     status:     Object;
     chosed:     any;
     protocol:   Object;
+    buyAmount:  any;
+    form;
 
-    constructor(private productListService : ProductListService) {}
+    constructor(private productListService : ProductListService) {
+
+    }
 
     ngOnChanges(): void {
         this.initData();
@@ -56,12 +61,13 @@ export class Fix1Component implements OnChanges {
                     unit: '%'
                 }
             ];
-            //配置第二個列表
+            // 配置第二個列表
             this.list1 = [
                 {
                     left: '购买金额',
                     unit: '元',
                     input: true,
+                    inputModel: '',
                     placeholder: '请输入' + productDetail['minInvestAmount'] / 100 + '的整数倍'
                 }, {
                     left: '使用优惠券',
@@ -82,10 +88,18 @@ export class Fix1Component implements OnChanges {
     updateChosed(chosed) {
         // 接收子組件選中消息并更新當前component（把購買按鈕變成可點擊態）
         this.chosed = chosed;
+        console.log(this.chosed,this.buyAmount)
         this.status = {
-            type: + this.chosed
-                ? 1
-                : 2,
+            type: + this.chosed && this.buyAmount ? 1 : 2,
+            text: '购买'
+        };
+    }
+
+    // 输入金额的时候的子组件回调
+    updateList(data){
+        this.buyAmount = data[0].inputModel;
+        this.status = {
+            type: +this.chosed && this.buyAmount ? 1 : 2,
             text: '购买'
         };
     }

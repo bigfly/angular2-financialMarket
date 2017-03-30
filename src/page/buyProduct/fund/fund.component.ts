@@ -22,8 +22,8 @@ export class FundBuyComponent implements OnInit {
 
   getData(){
       let that = this;
-      this.productListService.getList('fixBuy').then(function(res){
-          that.param = res['productDetail'];
+      this.productListService.getList('fundBuy').then(function(res){
+          that.param = res['data'];
       });
   }
 

@@ -435,6 +435,25 @@
 		},
 		"serverTime": 1490146212451,
 		"token": null
+  },
+  "fundBuy":{
+	"data": {
+		"discountRate": "5.00%",
+		"fundId": "000362",
+		"fundName": "国泰聚信A",
+		"holdCount": "100.00",
+		"maxBidFeeRate": "1.5",
+		"minBidCount": "1.00",
+		"minBidFeeRate": "0.0",
+		"minHoldAmt": "0.00",
+		"minPurchaseAmt": "100",
+		"netValue": "1.00",
+		"subRate": "1.00%",
+		"sysTime": "1481790659603"
+	},
+	"returnCode": "0",
+	"returnMsg": "FDM00000",
+	"returnUserMessage": "处理成功"
   }
   
 }

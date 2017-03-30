@@ -1,6 +1,6 @@
 @import '../../app.component.scss';
 // type == 1
-.bannerTop {
+.type1 {
     height: 192px;
     .earn-new {
         font-size: 21px;
@@ -81,7 +81,8 @@
 }
 
 // type == 2
-.fundTop{ 
+.type2
+{ 
     width: 100%;
     margin-bottom:10px;
     background:#fff;
@@ -167,6 +168,39 @@
                 width: 1px;
                 height: 24.5px;
                 background: #e1e3e6;
+            }
+        }
+    }
+}
+
+.type3{ 
+    background: #3479df;
+    overflow: hidden;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+    span{
+        font-size: 13px;
+        display: inline-block;
+    }
+    .name{ 
+        margin-top: 22px;
+        margin-bottom: 13px;
+        padding-left: 13px;
+    }
+    .imfor{ 
+        margin-bottom: 10px;
+        .earn{ 
+            width: 48%;
+            padding-left: 14px;
+        }
+        .step{ 
+            width:45%;
+            position: relative;
+            top: 1px;
+            left: -1px;
+            .startNum{ 
+                margin-left: 10px;
             }
         }
     }

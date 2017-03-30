@@ -1,5 +1,5 @@
 
-<div class="bannerTop" *ngIf="type == 1">
+<div class="type1" *ngIf="type == 1">
     <a href="javascript:return false;">
         <p class="title licaiTitle">
             <span class="middle"><span class="left">·</span>{{ headerParam?.productName }}<span class="right">·</span></span>
@@ -13,7 +13,7 @@
     </a>
 </div>
 
-<div class="fundTop" *ngIf="type == 2">
+<div class="type2" *ngIf="type == 2">
     <div class="topContain">
         <p class="title">{{headerParam?.fundName}}</p>
         <p class="sline">
@@ -34,3 +34,11 @@
         </div>
     </div>
 </div> 
+
+<div class="type3" *ngIf="type == 3">
+    <p class="name">{{headerParam?.name}}</p>
+    <p class="imfor">
+        <span class="earn">最新净值 <span class="num">{{headerParam?.netValue}}</span></span>
+        <span class="step"><span class="startNum">起购金额</span> <span class="num">{{headerParam?.minPurchaseAmt}}元</span></span>
+    </p>
+</div>

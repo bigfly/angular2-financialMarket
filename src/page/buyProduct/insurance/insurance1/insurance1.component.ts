@@ -12,6 +12,7 @@ export class Insurance1Component implements OnChanges {
 
     @Input() routerParam: Object;
     @Input() param:       Object;
+    @Input() submitParam: Object;
 
     list:     Array<Object>;
     list1:    Array<Object>;
@@ -68,11 +69,13 @@ export class Insurance1Component implements OnChanges {
                 {
                     left : '手机号码',
                     input: true,
+                    inputModel: '',
                     placeholder: '请输入手机号码'
                 },
                 {
                     left : '电子邮箱',
                     input: true,
+                    inputModel: '',
                     placeholder: '请输入电子邮箱'
                 },
                 {
@@ -83,6 +86,7 @@ export class Insurance1Component implements OnChanges {
                 {
                     left: '详细地址',
                     textareaPH: '请输入详细地址',
+                    inputModel: '',
                     textarea : true
                 },
             ];
@@ -104,6 +108,11 @@ export class Insurance1Component implements OnChanges {
                 : 2,
             text: '提交'
         };
+    }
+
+    // 保单第二个list输入框变化的时候，子组件会调用这个函数并且把新的object的值返回
+    updateList(data){
+        console.log(data);
     }
 
 }

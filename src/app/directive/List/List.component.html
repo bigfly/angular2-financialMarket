@@ -9,7 +9,7 @@
 </div>
 
 <div class="type2" *ngIf="type == 2">
-    <div class="introduceContainer" (click)="click()" *ngFor="let url of urls">
+    <div class="introduceContainer" (click)="type2Click(url?.url)" *ngFor="let url of urls">
         <p class="title">{{url.title}}</p> 
         <div class="arrowContain">
             <div class="arrow"></div>
@@ -17,8 +17,8 @@
     </div>
 </div>
 
-<ul class="type3" *ngIf="type == 3">
-    <li *ngFor="let item of list" [ngClass]="{textareaHeight : item?.textarea}">
+<form [formGroup]="form" class="type3" *ngIf="type == 3">
+    <li *ngFor="let item of list;let i = index" [ngClass]="{textareaHeight : item?.textarea}">
         <span class="fl l">{{ item?.left }} </span>
         <div class="liContainer">
             <div class="fr r" *ngIf="item?.right || item?.unit ">
@@ -30,11 +30,11 @@
                 <span class="arrow"></span>
             </div>
             <div class="input-container" *ngIf="item?.input">
-                <input type="text" class="text" placeholder="{{item?.placeholder}}" />
+                <input type="text" class="text"   [(ngModel)]="item.inputModel" formControlName="input" placeholder="{{item?.placeholder}}" />
             </div>
             <div class="textarea-container" *ngIf="item?.textarea">
-                <textarea class="detail-address" placeholder="{{item?.textareaPH}}" ></textarea>
+                <textarea class="detail-address"  [(ngModel)]="item.inputModel" formControlName="inputArea" placeholder="{{item?.textareaPH}}" ></textarea>
             </div>
         </div>
     </li>
-</ul>
+</form>

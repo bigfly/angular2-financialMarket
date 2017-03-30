@@ -10,7 +10,8 @@ import { Component, OnInit, Input, OnChanges } from '@angular/core';
 export class FooterButtonComponent implements OnChanges {
 
     @Input() status: Object;
-    @Input() url: String;
+    @Input() url:    String;
+    @Input() param:  Object;
 
     constructor(private router: Router) {}
 
@@ -19,6 +20,7 @@ export class FooterButtonComponent implements OnChanges {
     }
 
     goUrl(): void {
+        console.log(this.param);
         this.router.navigate([this.url]);
     }
 

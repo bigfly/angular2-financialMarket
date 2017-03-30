@@ -1,5 +1,5 @@
 <div class="type1" *ngIf="type == 1">
-    <span class="box" (click)="clickProtocol()" [ngClass]="{chosed: chosed}" ></span>
+    <span class="box" *ngIf="chosed !== undefined" (click)="clickProtocol()" [ngClass]="{chosed: chosed}" ></span>
     <p class="text">
         {{param?.pre}}<span class="mid" (click)="showProtocol(param?.openUrl)">{{param?.mid}}</span>{{param?.after}}
     </p>

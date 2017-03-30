@@ -26,7 +26,7 @@ export class ProtocolComponent implements OnChanges {
         this.updateChosed.emit(this.chosed);
     }
 
-    showProtocol(param){
+    showProtocol(param) {
         let button = [];
         if(param && param.length > 1){
             for ( let i = 0; i < param.length; i++) {

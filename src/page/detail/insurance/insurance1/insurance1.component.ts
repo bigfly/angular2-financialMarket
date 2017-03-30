@@ -91,7 +91,7 @@ export class Insurance1Component implements OnChanges {
 
         this.urls = [{
             title: '免责声明',
-            url  : '234'
+            url  : 'openurl'
         }];
 
     }

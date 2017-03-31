@@ -5,6 +5,7 @@ import { BuyProductComponent }   from '../page/buyProduct/index/index.component'
 import { HotProductComponent }   from '../page/index/hotProduct/hotProduct.component';
 import { ProductListComponent }   from '../page/index/productList/productList.component';
 import { MyProductComponent }   from '../page/index/myProduct/myProduct.component';
+import { IndexOrderListComponent }   from '../page/orderList/index.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/hotProduct', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'myProduct',  component: MyProductComponent },
   { path: 'detail/:businessType/:productId/:productType',  component: IndexDetailComponent },
   { path: 'buyProduct/:businessType/:productId/:productType',  component: BuyProductComponent },
+  { path: 'orderList/:productType/:type',  component: IndexOrderListComponent },
 ];
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],

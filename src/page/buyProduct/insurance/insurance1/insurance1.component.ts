@@ -99,8 +99,8 @@ export class Insurance1Component implements OnChanges {
         };
     }
 
+    // 接收子組件選中消息并更新當前component（把購買按鈕變成可點擊態）
     updateChosed(chosed) {
-        // 接收子組件選中消息并更新當前component（把購買按鈕變成可點擊態）
         this.chosed = chosed;
         this.status = {
             type: + this.chosed

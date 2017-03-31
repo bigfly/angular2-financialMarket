@@ -1,0 +1,25 @@
+    
+<app-header [headerParam]='headerParam' [type]="3"></app-header>
+
+<div class="buyContainer">
+    <div class="Fcontent">
+        <span class="buyText">买入金额</span>
+        <div><input type="number" (ngModelChange)="update($event)"  [(ngModel)]="buyNumber" #buyNum  placeholder="建议买入金额1000.00元" class="buyNum"></div>
+    </div>
+    <p class="secondL">
+        <span class="warn"></span>
+        <span class="orgin">费率:<span>{{param?.subRate}}</span></span>
+        <span class="now">{{param?.discountRate}}</span>
+    </p>
+</div>
+
+<div class="tipContain" *ngFor="let item of tips">
+    <div class="buyTip"></div> 
+    <div class="rightText">{{item}}</div>
+</div>
+
+<app-protocol [type]="1" [param]="protocol" class="fund1" ></app-protocol>
+
+<ion-footer align-title="center">
+    <app-footer-button [status]='status' [url]="url"></app-footer-button>   
+</ion-footer>

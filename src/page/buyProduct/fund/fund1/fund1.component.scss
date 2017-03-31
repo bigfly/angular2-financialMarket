@@ -1,0 +1,79 @@
+@import '../../../../app/app.component.scss';
+
+.buyContainer{ 
+    font-size: 16px;
+    color: #19191a;
+    background: #fff;
+    margin-bottom: 10px;
+
+    .Fcontent{ 
+        @include onepx-border-horizontal(#e3e4e6);
+        input{ 
+            padding-right: 18px;
+            width: 73%;
+            line-height: 48px;
+        }
+    }
+    .buyText{ 
+        line-height: 48px;
+        padding-left: 14px;
+        float: left;
+        width: 27%;
+    }
+
+    .secondL{ 
+        font-size: 12px;
+        padding-left: 14px;
+        height: 30px;
+        line-height: 30px;
+        @include onepx-border-bottom(#e3e4e6);
+
+        .warn{ 
+            display: inline-block;
+            width:12px;
+            height:12px;
+            background: url("/src/images/warn.jpg");
+            background-size: 100% 100%;
+            position: relative;
+            top: 2px;
+        }
+        .orgin{ 
+            color: #b1b1b3;
+
+            span{ 
+                text-decoration: line-through
+            }
+        }
+        .now{ 
+            color: #ff6056;
+        }
+    }
+}
+
+.tipContain{ 
+    color: #b1b1b3;
+    font-size: 12px;
+    padding-left: 15px;
+    padding-right: 10px;
+    margin-top: 4px;
+
+    .buyTip{ 
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        background: url("/src/images/greyCircle.jpg");
+        background-size: 100% 100%;
+        float: left;
+        position: relative;
+        top: 8px;
+    }
+    .rightText{ 
+        padding-left: 13px;
+    }
+}
+
+ion-footer{
+    position: relative;
+    width: 93%;
+    margin: 0 auto;
+}

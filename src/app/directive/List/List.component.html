@@ -8,8 +8,17 @@
     </div>
 </div>
 
-<div class="type2" *ngIf="type == 2">
+<!--<div class="type2" *ngIf="type == 2">
     <div class="introduceContainer" (click)="type2Click(url?.url)" *ngFor="let url of urls">
+        <p class="title">{{url.title}}</p> 
+        <div class="arrowContain">
+            <div class="arrow"></div>
+        </div>
+    </div>
+</div>-->
+
+<div class="type2" *ngIf="type == 2">
+    <div class="introduceContainer" (click)="type2Click(url?.url)" *ngFor="let url of list">
         <p class="title">{{url.title}}</p> 
         <div class="arrowContain">
             <div class="arrow"></div>
@@ -38,3 +47,41 @@
         </div>
     </li>
 </form>
+
+<div *ngIf="type == 4">
+    <div class="type ui-border-tb fixSaveType type4" *ngFor="let item of list" (click)="clickDetail(detail)">
+        <div class="statusContainer">
+            <p class="crossLine"></p>
+            <!--<p class="typeTip">{{detail.productName}}-{{detail.productCode}}</p>-->
+            <p class="typeTip">{{item?.name}}</p>
+
+
+            <!--<p class="financeType state1" *ngIf="detail.status == 2||detail.status == 8">募集中</p>
+            <p class="financeType state1" *ngIf="detail.status >= 3 && detail.status <= 4">募集中</p>
+            <p class="financeType state1" *ngIf="detail.status == 5">开始计息</p>
+            <p class="financeType state1" *ngIf="detail.status == 6">开始回款</p>
+            <p class="financeType state2" *ngIf="detail.status == 7">全额本息已到账</p>
+            <p class="financeType state3" *ngIf="detail.status == 9">购买失败</p>-->
+            <p class="financeType">{{item?.text}}</p>
+        </div>
+        <div class="numberContainer">
+            <!--<span class="ammount">{{detail.totalAmount / 100  | currency: '' : 2}}</span>
+            <span class="earn">{{detail.expectIncome / 100  | currency: '' : 2}}</span>-->
+            <span class="ammount">{{ item?.totalAmount }}</span>
+            <span class="earn">{{ item?.expectIncome }}</span>
+        </div>
+        <div class="numberContainer tipContainer">
+            <span class="ammount ammountTip">已投金额(元)</span>
+            <span class="earn earnTip">预期收益(元)</span>
+        </div>
+
+        <p class="desc" >{{item?.detail.repayText}}</p>
+        <!--<p class="desc" *ngIf="detail.status <= 2">预计到期日 {{ detail.repayTime }} (到期后2~3个工作日到账)</p>
+        <p class="desc" *ngIf="detail.status >= 3 && detail.status <= 4">预计到期日 {{ detail.repayTime }} (到期后2~3个工作日到账)</p>
+        <p class="desc" *ngIf="detail.status == 5">预计到期日 {{ detail.repayTime }} (到期后2~3个工作日到账)</p>
+        <p class="desc" *ngIf="detail.status == 6">已于 {{ detail.repayTime }} 到期(到期后2~3个工作日到账)</p>
+        <p class="desc" *ngIf="detail.status == 7">已于 {{ detail.repayTime }} 到期</p>
+        <p class="desc" *ngIf="detail.status == 8">预计到期日 {{ detail.repayTime }} (到期后2~3个工作日到账)</p>
+        <p class="desc" *ngIf="detail.status == 9">预计到期日 {{ detail.repayTime }} (到期后2~3个工作日到账)</p>-->
+    </div>
+</div>

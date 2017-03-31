@@ -50,7 +50,7 @@ export class MyProductComponent implements OnInit {
    * @desc 跳订单详情
    */
   goDetail(type):void {
-    this.router.navigate(['OwnProduct']);
+    this.router.navigate(['orderList/2/1']);
   };
 
 }

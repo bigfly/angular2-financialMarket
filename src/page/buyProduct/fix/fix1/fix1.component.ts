@@ -85,10 +85,9 @@ export class Fix1Component implements OnChanges {
         };
     }
 
+    // 接收子組件選中消息并更新當前component（把購買按鈕變成可點擊態）
     updateChosed(chosed) {
-        // 接收子組件選中消息并更新當前component（把購買按鈕變成可點擊態）
         this.chosed = chosed;
-        console.log(this.chosed,this.buyAmount)
         this.status = {
             type: + this.chosed && this.buyAmount ? 1 : 2,
             text: '购买'

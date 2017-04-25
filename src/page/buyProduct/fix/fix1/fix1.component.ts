@@ -1,8 +1,10 @@
 import {Component, OnInit, Input, OnChanges} from '@angular/core';
-import {Http, Response} from '@angular/http';
+import {Http, Response,Headers} from '@angular/http';
 import {Router} from '@angular/router';
 import {ProductListService} from '../../../../app/service/productList.service';
-import {Observable} from 'rxjs/Rx';
+import { Observable } from 'rxjs/Rx';
+import 'rxjs/add/operator/debounceTime';
+import { FormControl } from '@angular/forms';
 
 @Component({selector: 'app-fix1', styleUrls: ['./fix1.component.scss'], templateUrl: './fix1.component.html'})
 export class Fix1Component implements OnChanges {
@@ -18,7 +20,7 @@ export class Fix1Component implements OnChanges {
     buyAmount:  any;
     form;
 
-    constructor(private productListService : ProductListService) {
+    constructor(private productListService : ProductListService,private http: Http) {
 
     }
 
@@ -96,6 +98,7 @@ export class Fix1Component implements OnChanges {
 
     // 输入金额的时候的子组件回调
     updateList(data){
+        console.log('updateList');
         this.buyAmount = data[0].inputModel;
         this.status = {
             type: +this.chosed && this.buyAmount ? 1 : 2,

@@ -213,46 +213,35 @@
     width: 100%;
     background-color: #fff;
     margin-bottom: 8px;
-
-    .tipContainer {
-        padding-bottom: 23px;
+    @include onepx-border-horizontal(#e1e3e5);
+    p,span{
+        font-size: 12px;
     }
     .desc {
         margin-left: 14px;
-        font-size: 12px;
         color: #979899;
-        line-height: 12px;
-        padding-top: 12px;
-        padding-bottom: 10px;
+        line-height: 34px;
         @include onepx-border-top(#e1e3e5);
     }
     .statusContainer {
-        padding-top: 24px;
-        margin-left: 10px;
-        padding-left: 10px;
+        padding: 24px 0 0 16px;
         overflow: hidden;
         .crossLine {
-            display: inline-block;
             width: 4px;
             height: 4px;
-            background: url("/src/images/crossLine.png");
+            background: url(/src/images/blueCircle.jpg);
             background-size: 100% 100%;
             float: left;
             position: relative;
             top: 4px;
-            right: 2px;
         }
-        .typeTip {
+        .name {
             padding-left: 5px;
-            font-size: 12px;
             line-height: 12px;
             color: #323233;
             float: left;
-            position: relative;
-            top: 0px;
         }
-        .financeType {
-            font-size: 12px;
+        .text {
             line-height: 12px;
             color: #323233;
             float: right;
@@ -268,12 +257,13 @@
             }
         }
     }
-    .numberContainer {
-        margin-top: 21px;
-        margin-left: 14px;
+    .number {
+        margin: 21px 0 0 14px;
         font-size: 22px;
-        line-height: 22px;
         overflow: hidden;
+        span{
+            font-size: 22px;
+        }
         .ammount {
             float: left;
             color: #323233;
@@ -283,31 +273,19 @@
             color: #ff6056;
             padding-right: 20px;
         }
-        .arrow {
-            float: right;
-            display: inline-block;
-            width: 7.5px;
-            height: 13px;
-            background: url("/src/images/arrow.png");
-            background-size: 100%, 100%;
-            position: relative;
-            top: 4px;
-            margin-right: 11px;
-            margin-left: 25px;
-        }
         .earnTip {
-            font-size: 12px;
             color: #979899;
         }
         .ammountTip {
-            font-size: 12px;
             color: #979899;
         }
     }
-    .tipContainer {
-        margin-top: 8px;
-        line-height: 12px;
-        padding-bottom: 20px;
+    .tip {
+        margin-top: 5px;
+        padding-bottom: 23px;
+        span{
+            font-size: 12px;
+        }
     }
 }
 

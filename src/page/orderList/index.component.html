@@ -1,0 +1,9 @@
+<ion-content class="orderList">
+
+    <app-fix-orderlist *ngIf="routerParam?.productType == 2" [type] = 'routerParam?.type'></app-fix-orderlist>
+
+    <app-insurance-orderlist *ngIf="routerParam?.productType == 3" [type] = 'routerParam?.type'></app-insurance-orderlist>
+
+    <app-fund-orderlist *ngIf="routerParam?.productType == 4" [type] = 'routerParam?.type'></app-fund-orderlist>
+
+</ion-content>

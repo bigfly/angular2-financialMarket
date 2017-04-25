@@ -2,16 +2,16 @@
     <div class="my-info">
         <div class="my-assets">
             <p class="my-assets-text">我的总资产(元)</p>
-            <p class="my-assets-num">{{data?.currentMoney || "0.00"}}</p>
+            <p class="my-assets-num">{{ data?.currentMoney }}</p>
         </div>
         <div class="clearfix my-profit-wrap">
             <div class="my-profit fl" (click)="goProfit(0)">
                 <p>最新收益</p>
-                <p>{{data?.lastTotalIncome || "0.00"}}</p>
+                <p>{{ data?.lastTotalIncome }}</p>
             </div>
             <div class="my-profit fl" (click)="goProfit(1)">
                 <p>已实现收益</p>
-                <p>{{data?.totalIncome || "0.00"}}</p>
+                <p>{{ data?.totalIncome }}</p>
             </div>
             <div class="my-profit-sep"></div>
         </div>
@@ -19,14 +19,14 @@
     <div class="my-list">
         <div class="my-list-item" *ngFor="let item of data?.list" (click)="goDetail(item.productType)">
             <div class="my-list-control">
-                <span class="my-list-name">{{productTypes[item?.productType]}}</span>
-                <span class="fr my-list-money">{{item?.investAmount || "0.00"}}<i>元</i></span>
+                <span class="my-list-name">{{ productTypes[item?.productType ]}}</span>
+                <span class="fr my-list-money">{{ item?.investAmount }}<i>元</i></span>
             </div>
             <div class="my-list-desc ui-border-t">
                 <p>最新收益<span class="fr">已实现收益</span></p>
                 <p>
-                    <span class="my-list-num">{{item?.lastIncome || "0.00"}}</span>元
-                    <span class="fr"><i class="my-list-num">{{item?.hasIncome || "0.00"}}</i>元</span>
+                    <span class="my-list-num">{{ item?.lastIncome }}</span>元
+                    <span class="fr"><i class="my-list-num">{{ item?.hasIncome }}</i>元</span>
                 </p>
             </div>
         </div>

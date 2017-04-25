@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import { UUID } from 'angular2-uuid';
+import { Observable }  from 'rxjs/Observable';
+import 'rxjs/add/operator/debounceTime';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -19,6 +21,19 @@ export class ProductListService {
             .toPromise()
             .then(res => res.json())
             .catch(this.handleError);
+  }
+
+  getDataDelay(url: String): Promise<{}> {
+
+    return Observable.create(
+                        (observer) => {
+                    this.http.get('http://localhost:3000/' + url, {headers: this.headers})
+                        .subscribe((result) => {
+                            observer.next(result['data']);
+                            observer.complete();
+                        }, (error) => { observer.error(error);});
+                }
+            )
   }
 
   private handleError(error: any): Promise<any> {

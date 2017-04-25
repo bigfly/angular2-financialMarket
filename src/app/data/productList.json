@@ -300,17 +300,17 @@
       "lastTotalIncome": "-2.33",
       "totalIncome": "+125.33",
       "list": [{
-          "productType": 4,
+          "productType": 2,
           "investAmount": 1345.90,
           "hasIncome": "+23.23",
           "lastIncome": "-22.33"
       }, {
-          "productType": 2,
+          "productType": 3,
           "investAmount": 212.10,
           "hasIncome": "+62.1",
           "lastIncome": "+11.6"
       }, {
-          "productType": 3,
+          "productType": 4,
           "investAmount": 21212,
           "hasIncome": "+78.3",
           "lastIncome": "-3.12"
@@ -454,7 +454,98 @@
 	"returnCode": "0",
 	"returnMsg": "FDM00000",
 	"returnUserMessage": "处理成功"
-  }
+  },
+  "fixOrderList":{
+	"error": {
+		"returnCode": 0,
+		"returnMessage": "操作成功",
+		"returnUserMessage": "操作成功"
+	},
+	"data": {
+		"hasMore": 0,
+		"pageNo": 1,
+		"list": [{
+			"productCode": "JDB16121205",
+			"productName": "九信理财",
+			"amount": 10000,
+			"status": 7,
+			"totalAmount": 14300,
+			"expectIncome": 3054,
+			"repayDate": 1493448894000
+		}, {
+			"productCode": "JDB16121205",
+			"productName": "九信理财",
+			"amount": 5000,
+			"status": 9,
+			"totalAmount": 1300,
+			"expectIncome": 3054,
+			"repayDate": 1493448894000
+		}]
+	},
+	"serverTime": 1490944458438,
+	"token": null
+  },
+	"insuranceOrderList":{
+		"error":{ 
+			"returnCode": 0,
+			"returnMessage": "操作成功",
+			"returnUserMessage": "操作成功"
+		},
+		"data":{
+			"hasMore" : 0, 
+			"pageNo": 1,
+			"list":[
+				{
+					"orderId": "128888232323",  
+					"productCode": "lc123",  
+					"productName": "理财2号", 
+					"investAmount":2000,
+					"hasIncome": 1000,     
+					"orderStatus" : 1 
+				},
+				{
+					"orderId": "128888232323",  
+					"productCode": "lc123",  
+					"productName": "理财一号", 
+					"investAmount":2003,
+					"hasIncome": 0,     
+					"orderStatus" : 2 
+				},
+				{
+					"orderId": "128888232323",  
+					"productCode": "lc123",  
+					"productName": "理财一号", 
+					"investAmount":20023,
+					"hasIncome": 1000,     
+					"orderStatus" : 3 
+				},
+				{
+					"orderId": "128888232323",  
+					"productCode": "lc123",  
+					"productName": "理财一号", 
+					"investAmount":20023232,
+					"hasIncome": 1000,     
+					"orderStatus" : 4 
+				},
+				{
+					"orderId": "128888232323",  
+					"productCode": "lc123",  
+					"productName": "理财一号", 
+					"investAmount":200,
+					"hasIncome": 1000,     
+					"orderStatus" : 5 
+				},
+				{
+					"orderId": "128888232323",  
+					"productCode": "lc123",  
+					"productName": "理财一号", 
+					"investAmount":20023232,
+					"hasIncome": 1000,     
+					"orderStatus" : 3 
+				}                    
+			]
+		}
+	}
   
 }
 

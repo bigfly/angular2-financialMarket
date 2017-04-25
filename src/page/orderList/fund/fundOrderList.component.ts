@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Router } from '@angular/router';
 import { ProductListService }  from '../../../app/service/productList.service';
@@ -10,7 +10,9 @@ import { ProductListService }  from '../../../app/service/productList.service';
   })
 export class FundOrderListComponent implements OnInit {
 
-  data:    Object;
+  @Input() type;
+
+  list:    Object;
 
   constructor(private productListService: ProductListService, private router: Router) {}
 
@@ -21,7 +23,7 @@ export class FundOrderListComponent implements OnInit {
   getData(): void{
     let that = this;
     this.productListService.getList('productList').then(function(res){
-      that.data = res;
+      that.list = res;
     });
   }
 

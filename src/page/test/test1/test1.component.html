@@ -1,0 +1,7 @@
+<form [formGroup]="coolForm">
+    <input formControlName="search" placeholder="Search Spotify artist">
+</form>
+
+<div *ngFor="let artist of result">
+    {{artist.name}}
+</div>

@@ -36,6 +36,11 @@ export class ProductListService {
             )
   }
 
+  testSearch(term: string) {
+    return this.http.get('https://api.spotify.com/v1/search?q=' + term + '&type=artist')
+      .map(response => response.json());
+  }
+
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); 
     return Promise.reject(error.message || error);

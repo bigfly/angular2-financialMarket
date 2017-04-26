@@ -98,8 +98,8 @@ export class Fix1Component implements OnChanges {
 
     // 输入金额的时候的子组件回调
     updateList(data){
-        console.log('updateList');
         this.buyAmount = data[0].inputModel;
+        console.log(this.buyAmount);
         this.status = {
             type: +this.chosed && this.buyAmount ? 1 : 2,
             text: '购买'

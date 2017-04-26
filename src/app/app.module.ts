@@ -15,6 +15,7 @@ import { IndexBuyProductModule } from '../page/buyProduct/index/index.module';
 import { OrderListModule } from '../page/orderList/index.module';
 import { DirectiveModule } from './directive/index.module';
 
+import { IndexTestModule } from '../page/test/index.module';
 
 import { ProductListService } from './service/productList.service';
 
@@ -34,6 +35,7 @@ import { ProductListService } from './service/productList.service';
     IndexBuyProductModule,
     DirectiveModule,
     OrderListModule,
+    IndexTestModule,
     IonicModule.forRoot(AppComponent)
   ],
   providers: [

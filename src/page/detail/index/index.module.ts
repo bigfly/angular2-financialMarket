@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicApp, IonicModule } from 'ionic-angular';
-import { EchartsNg2Module } from 'echarts-ng2';
+// import { EchartsNg2Module } from 'echarts-ng2';
 
 import { IndexDetailComponent } from '../index/index.component';
 
@@ -21,7 +21,7 @@ import { Fund1Component } from '../fund/fund1/fund1.component';
 @NgModule({
   imports: [
     CommonModule,
-    EchartsNg2Module,
+    // EchartsNg2Module,
     DirectiveModule,
     IonicModule.forRoot(IndexDetailComponent)
   ],

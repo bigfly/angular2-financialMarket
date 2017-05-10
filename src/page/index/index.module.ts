@@ -7,6 +7,8 @@ import { MyProductComponent } from './myProduct/myProduct.component';
 import { HotProductComponent } from './hotProduct/hotProduct.component';
 
 import { TabComponent } from '../../app/directive/tab/tab.component';
+import { Test1Component } from '../../app/directive/test/test1/testDirective.component';
+import { Test2Component } from '../../app/directive/test/test2/testDirective.component';
 
 
 @NgModule({
@@ -19,6 +21,8 @@ import { TabComponent } from '../../app/directive/tab/tab.component';
     MyProductComponent,
     HotProductComponent,
     TabComponent,
+    Test1Component,
+    Test2Component
   ]
 })
 export class IndexModule {}

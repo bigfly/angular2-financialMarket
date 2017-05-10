@@ -17,14 +17,17 @@ export class Test1Component {
         this.coolForm = fb.group({search: this.searchField});
 
         var that  = this;
-        this.searchField.valueChanges
-          .debounceTime(400)
-            // .switchMap(function(term){
-            //     console.log(term)
-            //     return that.searchService.testSearch(term)
-            // })
-            .subscribe((result) => {
-                // this.result = result.artists.items
+
+        // 设置你的流
+        let test = this.searchField.valueChanges
+            .debounceTime(400)
+            .switchMap(function(term){
+                console.log(term)
+                return that.searchService.testSearch(term)
+            })
+
+        test.subscribe((result) => {
+                // 做一些自己的处理
                 console.log(result)
                 that.searchService.testSearch(result);
             });

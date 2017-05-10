@@ -22,7 +22,7 @@
             .box {
                 width: 86px;
                 height: 61.5px;
-                background: url(/src/images/no-product.png) no-repeat;
+                background: url(/images/no-product.png) no-repeat;
                 background-size: 100% 100%;
                 margin: 0 auto;
             }
@@ -44,7 +44,7 @@
                     display: inline-block;
                     width: 20px;
                     height: 19px;
-                    background: url(/src/images/no-hot-img.jpg);
+                    background: url(/images/no-hot-img.jpg);
                     background-size: 100% 100%;
                     position: relative;
                     top: 4px;
@@ -69,7 +69,7 @@
         .topBanner{ 
             height: 150px;
             width: 100%;
-            background: url("/src/images/newBanner.png") no-repeat;
+            background: url("/images/newBanner.png") no-repeat;
             background-size: 100% 100%;
             // margin-bottom:10px;
         }
@@ -102,7 +102,7 @@
                 .new{ 
                     width: 17px;
                     height: 17px;
-                    background: url(/src/images/newPro.jpg) no-repeat;
+                    background: url(/images/newPro.jpg) no-repeat;
                     background-size: 100% 100%;
                     position: absolute;
                     right: -17px;
@@ -114,7 +114,7 @@
                 .fixImage{
                     width: 28px;
                     height: 25.5px;
-                    background: url(/src/images/fixTab.jpg) no-repeat;
+                    background: url(/images/fixTab.jpg) no-repeat;
                     background-size: 100% 100%;
                     position: absolute;
                     right: 17px;
@@ -130,7 +130,7 @@
                 .insuranceImage{
                     width: 26px;
                     height: 23px;
-                    background: url("/src/images/insuranceTab.jpg") no-repeat;
+                    background: url("/images/insuranceTab.jpg") no-repeat;
                     background-size: 100% 100%;
                     margin: 0 auto;
                 }
@@ -151,7 +151,7 @@
                 .fundImage{
                     width: 28px;
                     height: 23px;
-                    background: url("/src/images/fundTab.jpg") no-repeat;
+                    background: url("/images/fundTab.jpg") no-repeat;
                     background-size: 100% 100%;
                     position: absolute;
                     left: 14px;

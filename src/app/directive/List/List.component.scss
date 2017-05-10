@@ -16,7 +16,7 @@
             @include onepx-border-horizontal(#e3e4e6);
             
             .bgProductExplain {
-                background: url("/src/images/productExplain.png") no-repeat;
+                background: url("/images/productExplain.png") no-repeat;
                 background-size: 100% 100%;
                 width: 10px;
                 height: 11px;
@@ -24,7 +24,7 @@
                 top: 1px;
             }
             .bgQualifications {
-                background: url("/src/images/qualifications.png") no-repeat;
+                background: url("/images/qualifications.png") no-repeat;
                 background-size: 100% 100%;
                 width: 11px;
                 height: 13px;
@@ -32,19 +32,19 @@
                 top: -1px;
             }
             .bgBackIntro {
-                background: url("/src/images/backIntro.png") no-repeat;
+                background: url("/images/backIntro.png") no-repeat;
                 background-size: 100% 100%;
                 width: 12.5px;
                 height: 12px;
             }
             .bgMoneyTip {
-                background: url("/src/images/moneyTip.png") no-repeat;
+                background: url("/images/moneyTip.png") no-repeat;
                 background-size: 100% 100%;
                 width: 11px;
                 height: 13px;
             }
             .bgBuyBack {
-                background: url("/src/images/buyBack.png") no-repeat;
+                background: url("/images/buyBack.png") no-repeat;
                 background-size: 100% 100%;
                 width: 12.5px;
                 height: 12px;
@@ -52,7 +52,7 @@
             .bgLocationTip {
                 width: 12px;
                 height: 14px;
-                background: url("/src/images/locationTip.png") no-repeat;
+                background: url("/images/locationTip.png") no-repeat;
                 background-size: 100% 100%;
                 position: relative;
                 top: -1px;
@@ -117,7 +117,7 @@
             .arrow{ 
                 width: 6px;
                 height: 10.5px;
-                background: url(/src/images/arrow.jpg) no-repeat;
+                background: url(/images/arrow.jpg) no-repeat;
                 background-size: 100%,100%;
                 position: absolute;
                 right: 15px;
@@ -170,7 +170,7 @@
         display:inline-block;
         width:7.5px;
         height:14px;
-        background: url(/src/images/greyArrow.jpg) no-repeat;
+        background: url(/images/greyArrow.jpg) no-repeat;
         background-size: 100%,100%;
         position: relative;
         top: 2px;
@@ -229,7 +229,7 @@
         .crossLine {
             width: 4px;
             height: 4px;
-            background: url(/src/images/blueCircle.jpg);
+            background: url(/images/blueCircle.jpg);
             background-size: 100% 100%;
             float: left;
             position: relative;

@@ -9,7 +9,7 @@ import { ListComponent }  from './List/List.component';
 import { FooterButtonComponent }  from './footerButton/footerButton.component';
 import { ProtocolComponent }  from './Protocol/Protocol.component';
 import { EchartComponent }  from './echart/echart.component';
-
+import { Test1Component }  from './test/test1/testDirective.component';
 
 
 @NgModule({

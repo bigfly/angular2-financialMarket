@@ -15,6 +15,9 @@ export class HotProductComponent implements OnInit {
   hotProducts: {};
   state: string;
 
+  test1;
+  test2;
+
   constructor(private http: Http,private productListService: ProductListService, 
               private router: Router,private alertCtrl: AlertController) {}
 
@@ -22,6 +25,11 @@ export class HotProductComponent implements OnInit {
     this.showContent = 1;
     this.state = 'hot';
     this.getData();
+
+    this.test1 = 'test1';
+    this.test2 = 'test2';
+    let that = this;
+
   }
 
   getData(): void{
